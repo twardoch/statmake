@@ -1,0 +1,4727 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+.github/
+  workflows/
+    ci.yml
+src/
+  statmake/
+    __init__.py
+    __main__.py
+    classes.py
+    cli.py
+    errors.py
+    lib.py
+tests/
+  data/
+    elided_fallback/
+      Default.stylespace
+      Font.designspace
+      IntegerCorrect.stylespace
+      IntegerInvalid.stylespace
+      NameRecord.stylespace
+    Test_Wght_Italic.designspace
+    Test_Wght_Upright.designspace
+    Test_WghtItal_Multilingual.designspace
+    Test_WghtItal.designspace
+    Test.stylespace
+    TestBogusFormat4_2.stylespace
+    TestBogusFormat4.stylespace
+    TestBroken.stylespace
+    TestBrokenAxes.stylespace
+    TestDuplicateValue.stylespace
+    TestDuplicateValueFormat4.stylespace
+    TestExternalStylespace.designspace
+    TestIncomplete.stylespace
+    TestInlineStylespace.designspace
+    TestItalIsSlnt.stylespace
+    TestJustWght.stylespace
+    TestMissingLinkedValue.stylespace
+    TestMultilingual.stylespace
+    TestMultilingualBrokenAxisNameLang.stylespace
+    TestMultilingualBrokenLocNameLang.stylespace
+    TestMultilingualNoEn.stylespace
+    TestNoFormat4.stylespace
+  conftest.py
+  test_cli.py
+  test_elided_fallback.py
+  test_make_stat.py
+  test_serialize.py
+  testutil.py
+.coveragerc
+.editorconfig
+.gitattributes
+.gitignore
+LICENSE
+pyproject.toml
+README.md
+tox.ini
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="tests/data/Test_Wght_Italic.designspace">
+<?xml version="1.0" encoding="utf-8"?>
+<designspace format="4.0">
+  <axes>
+    <axis default="200" maximum="900" minimum="200" name="Weight" tag="wght">
+      <map input="200" output="0" />
+      <map input="300" output="100" />
+      <map input="333" output="333" />
+      <map input="400" output="368" />
+      <map input="600" output="600" />
+      <map input="650" output="789" />
+      <map input="700" output="824" />
+      <map input="900" output="1000" />
+    </axis>
+  </axes>
+
+  <sources>
+    <source filename="master1-ital.ufo" stylename="Extra Light Italic">
+      <info copy="1" />
+      <location>
+        <dimension name="Weight" xvalue="0" />
+      </location>
+    </source>
+    <source filename="master2-ital.ufo" stylename="Black Italic">
+      <location>
+        <dimension name="Weight" xvalue="1000" />
+      </location>
+    </source>
+  </sources>
+
+  <instances>
+    <instance stylename="Extra Light Italic">
+      <location>
+        <dimension name="Weight" xvalue="0" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+    <instance stylename="Light Italic">
+      <location>
+        <dimension name="Weight" xvalue="100" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+    <instance stylename="Italic">
+      <location>
+        <dimension name="Weight" xvalue="368" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+    <instance stylename="Semi Bold Italic">
+      <location>
+        <dimension name="Weight" xvalue="600" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+    <instance stylename="Bold Italic">
+      <location>
+        <dimension name="Weight" xvalue="824" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+    <instance stylename="Black Italic">
+      <location>
+        <dimension name="Weight" xvalue="1000" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+    <instance stylename="ASDF">
+      <location>
+        <dimension name="Weight" xvalue="333" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+  </instances>
+
+  <lib>
+    <dict>
+      <key>org.statmake.additionalLocations</key>
+      <dict>
+        <key>Italic</key>
+        <integer>1</integer>
+      </dict>
+    </dict>
+  </lib>
+</designspace>
+</file>
+
+<file path="tests/data/Test_Wght_Upright.designspace">
+<?xml version="1.0" encoding="utf-8"?>
+<designspace format="4.0">
+  <axes>
+    <axis default="200" maximum="900" minimum="200" name="Weight" tag="wght">
+      <map input="200" output="0" />
+      <map input="300" output="100" />
+      <map input="333" output="333" />
+      <map input="400" output="368" />
+      <map input="600" output="600" />
+      <map input="650" output="789" />
+      <map input="700" output="824" />
+      <map input="900" output="1000" />
+    </axis>
+  </axes>
+
+  <sources>
+    <source filename="master1.ufo" stylename="Extra Light">
+      <info copy="1" />
+      <location>
+        <dimension name="Weight" xvalue="0" />
+      </location>
+    </source>
+    <source filename="master2.ufo" stylename="Black">
+      <location>
+        <dimension name="Weight" xvalue="1000" />
+      </location>
+    </source>
+  </sources>
+
+  <instances>
+    <instance stylename="Extra Light">
+      <location>
+        <dimension name="Weight" xvalue="0" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+    <instance stylename="Light">
+      <location>
+        <dimension name="Weight" xvalue="100" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+    <instance stylename="Regular">
+      <location>
+        <dimension name="Weight" xvalue="368" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+    <instance stylename="Semi Bold">
+      <location>
+        <dimension name="Weight" xvalue="600" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+    <instance stylename="Bold">
+      <location>
+        <dimension name="Weight" xvalue="824" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+    <instance stylename="Black">
+      <location>
+        <dimension name="Weight" xvalue="1000" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+  </instances>
+
+  <lib>
+    <dict>
+      <key>org.statmake.additionalLocations</key>
+      <dict>
+        <key>Italic</key>
+        <integer>0</integer>
+      </dict>
+    </dict>
+  </lib>
+</designspace>
+</file>
+
+<file path="tests/data/Test_WghtItal.designspace">
+<?xml version="1.0" encoding="utf-8"?>
+<designspace format="4.0">
+  <axes>
+    <axis default="200" maximum="900" minimum="200" name="Weight" tag="wght">
+      <map input="200" output="0" />
+      <map input="300" output="100" />
+      <map input="333" output="333" />
+      <map input="400" output="368" />
+      <map input="600" output="600" />
+      <map input="650" output="789" />
+      <map input="700" output="824" />
+      <map input="900" output="1000" />
+    </axis>
+    <axis default="0" maximum="1" minimum="0" name="Italic" tag="ital"/>
+  </axes>
+
+  <sources>
+    <source filename="master1.ufo" stylename="Extra Light">
+      <info copy="1" />
+      <location>
+        <dimension name="Weight" xvalue="0" />
+        <dimension name="Italic" xvalue="0" />
+      </location>
+    </source>
+    <source filename="master2.ufo" stylename="Black">
+      <location>
+        <dimension name="Weight" xvalue="1000" />
+        <dimension name="Italic" xvalue="0" />
+      </location>
+    </source>
+    <source filename="master1-ital.ufo" stylename="Extra Light Italic">
+      <location>
+        <dimension name="Weight" xvalue="0" />
+        <dimension name="Italic" xvalue="1" />
+      </location>
+    </source>
+    <source filename="master2-ital.ufo" stylename="Black Italic">
+      <location>
+        <dimension name="Weight" xvalue="1000" />
+        <dimension name="Italic" xvalue="1" />
+      </location>
+    </source>
+  </sources>
+
+  <instances>
+    <instance stylename="Extra Light">
+      <location>
+        <dimension name="Weight" xvalue="0" />
+        <dimension name="Italic" xvalue="0" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+    <instance stylename="Light">
+      <location>
+        <dimension name="Weight" xvalue="100" />
+        <dimension name="Italic" xvalue="0" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+    <instance stylename="Regular">
+      <location>
+        <dimension name="Weight" xvalue="368" />
+        <dimension name="Italic" xvalue="0" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+    <instance stylename="Semi Bold">
+      <location>
+        <dimension name="Weight" xvalue="600" />
+        <dimension name="Italic" xvalue="0" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+    <instance stylename="Bold">
+      <location>
+        <dimension name="Weight" xvalue="824" />
+        <dimension name="Italic" xvalue="0" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+    <instance stylename="Black">
+      <location>
+        <dimension name="Weight" xvalue="1000" />
+        <dimension name="Italic" xvalue="0" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+    <instance stylename="Extra Light Italic">
+      <location>
+        <dimension name="Weight" xvalue="0" />
+        <dimension name="Italic" xvalue="1" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+    <instance stylename="Light Italic">
+      <location>
+        <dimension name="Weight" xvalue="100" />
+        <dimension name="Italic" xvalue="1" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+    <instance stylename="Italic">
+      <location>
+        <dimension name="Weight" xvalue="368" />
+        <dimension name="Italic" xvalue="1" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+    <instance stylename="Semi Bold Italic">
+      <location>
+        <dimension name="Weight" xvalue="600" />
+        <dimension name="Italic" xvalue="1" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+    <instance stylename="Bold Italic">
+      <location>
+        <dimension name="Weight" xvalue="824" />
+        <dimension name="Italic" xvalue="1" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+    <instance stylename="Black Italic">
+      <location>
+        <dimension name="Weight" xvalue="1000" />
+        <dimension name="Italic" xvalue="1" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+    <instance stylename="ASDF">
+      <location>
+        <dimension name="Weight" xvalue="333" />
+        <dimension name="Italic" xvalue="1" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+    <instance stylename="fgfg">
+      <location>
+        <dimension name="Weight" xvalue="789" />
+        <dimension name="Italic" xvalue="0.5" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+  </instances>
+</designspace>
+</file>
+
+<file path="tests/data/TestBroken.stylespace">
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>axes</key>
+    <array>
+      <dict>
+        <key>locations</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>Extra Light</string>
+            <key>range</key>
+            <array>
+              <integer>200</integer>
+            </array>
+            <key>value</key>
+            <integer>200</integer>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>Light</string>
+            <key>range</key>
+            <array>
+              <integer>250</integer>
+              <integer>350</integer>
+            </array>
+            <key>value</key>
+            <integer>300</integer>
+          </dict>
+        </array>
+        <key>name</key>
+        <string>Weight</string>
+        <key>tag</key>
+        <string>wght</string>
+        <key>ordering</key>
+        <integer>0</integer>
+      </dict>
+      <dict>
+        <key>locations</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>Italic</string>
+            <key>value</key>
+            <integer>1</integer>
+          </dict>
+        </array>
+        <key>name</key>
+        <string>Italic</string>
+        <key>tag</key>
+        <string>ital</string>
+        <key>ordering</key>
+        <integer>1</integer>
+      </dict>
+    </array>
+    <key>elided_fallback_name_id</key>
+    <integer>2</integer>
+  </dict>
+</plist>
+</file>
+
+<file path="tests/data/TestBrokenAxes.stylespace">
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>axes</key>
+    <array>
+      <dict>
+        <key>locations</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>Extra Light</string>
+            <key>range</key>
+            <array>
+              <integer>200</integer>
+              <integer>230</integer>
+            </array>
+            <key>value</key>
+            <integer>200</integer>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>Light</string>
+            <key>range</key>
+            <array>
+              <integer>250</integer>
+              <integer>350</integer>
+            </array>
+            <key>value</key>
+            <integer>300</integer>
+          </dict>
+        </array>
+        <key>name</key>
+        <string>Weight</string>
+        <key>tag</key>
+        <string>wght</string>
+        <key>ordering</key>
+        <integer>0</integer>
+      </dict>
+      <dict>
+        <key>locations</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>Italic</string>
+            <key>value</key>
+            <integer>1</integer>
+          </dict>
+        </array>
+        <key>name</key>
+        <string>Italic</string>
+        <key>tag</key>
+        <string>ital</string>
+      </dict>
+    </array>
+    <key>elided_fallback_name_id</key>
+    <integer>2</integer>
+  </dict>
+</plist>
+</file>
+
+<file path="tests/data/TestIncomplete.stylespace">
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>axes</key>
+    <array>
+      <dict>
+        <key>name</key>
+        <string>Weight</string>
+        <key>tag</key>
+        <string>wght</string>
+        <key>locations</key>
+        <array>
+
+          <dict>
+            <key>name</key>
+            <string>XLight</string>
+            <key>value</key>
+            <integer>200</integer>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <string>Light</string>
+            <key>value</key>
+            <integer>300</integer>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <string>Semi Bold</string>
+            <key>value</key>
+            <integer>600</integer>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <dict>
+              <key>en</key>
+              <string>Bold</string>
+            </dict>
+            <key>value</key>
+            <integer>700</integer>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <string>Black</string>
+            <key>value</key>
+            <integer>900</integer>
+            <key>range</key>
+            <array>
+              <integer>701</integer>
+              <integer>900</integer>
+            </array>
+          </dict>
+
+        </array>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>Italic</string>
+        <key>tag</key>
+        <string>ital</string>
+        <key>locations</key>
+        <array>
+
+          <dict>
+            <key>name</key>
+            <string>Upright</string>
+            <key>value</key>
+            <integer>0</integer>
+            <key>linked_value</key>
+            <integer>1</integer>
+            <key>flags</key>
+            <array>
+              <string>ElidableAxisValueName</string>
+            </array>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <string>Italic</string>
+            <key>value</key>
+            <integer>1</integer>
+          </dict>
+
+        </array>
+      </dict>
+    </array>
+  </dict>
+</plist>
+</file>
+
+<file path="tests/data/TestNoFormat4.stylespace">
+<?xml version='1.0' encoding='UTF-8'?><!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>axes</key>
+    <array>
+      <dict>
+        <key>name</key>
+        <string>Weight</string>
+        <key>tag</key>
+        <string>wght</string>
+        <key>locations</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>XLight</string>
+            <key>value</key>
+            <integer>200</integer>
+          </dict>
+        </array>
+      </dict>
+    </array>
+  </dict>
+</plist>
+</file>
+
+<file path=".editorconfig">
+# http://editorconfig.org
+
+root = true
+
+[*]
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
+insert_final_newline = true
+charset = utf-8
+end_of_line = lf
+
+[*.{yaml,yml,json,xml,designspace,stylespace,md}]
+indent_style = space
+indent_size = 2
+</file>
+
+<file path=".gitattributes">
+# Set the default behavior, in case people don't have core.autocrlf set.
+* text=auto
+
+# Explicitly declare text files you want to always be normalized and converted
+# to native line endings on checkout.
+*.py text
+</file>
+
+<file path=".gitignore">
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# SageMath parsed files
+*.sage.py
+
+# dotenv
+.env
+
+# virtualenv
+.venv
+venv/
+ENV/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+
+# VS Code
+.vscode
+.idea
+
+# Fontlab
+.vfb
+.bak
+</file>
+
+<file path="LICENSE">
+MIT License
+
+Copyright (c) 2019 Dalton Maag
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+</file>
+
+<file path="src/statmake/errors.py">
+class Error(Exception):
+    """Base exception."""
+
+
+class StylespaceError(Error):
+    """Represents a consistency error in Stylespaces."""
+</file>
+
+<file path="tests/data/elided_fallback/Default.stylespace">
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <!-- Test: 'elided_fallback_name_id' absent, should default to 2 -->
+
+    <!-- Other data that is mandatory to create a sensible STAT but not tested here -->
+    <key>axes</key>
+    <array>
+      <dict>
+        <key>name</key>
+        <string>Weight</string>
+        <key>tag</key>
+        <string>wght</string>
+        <key>locations</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>Regular</string>
+            <key>value</key>
+            <integer>400</integer>
+            <key>linked_value</key>
+            <integer>700</integer>
+            <key>flags</key>
+            <array>
+              <string>ElidableAxisValueName</string>
+            </array>
+          </dict>
+          <dict>
+            <key>name</key>
+            <dict>
+              <key>en</key>
+              <string>Bold</string>
+            </dict>
+            <key>value</key>
+            <integer>700</integer>
+          </dict>
+        </array>
+      </dict>
+    </array>
+  </dict>
+</plist>
+</file>
+
+<file path="tests/data/elided_fallback/Font.designspace">
+<?xml version="1.0" encoding="utf-8"?>
+<designspace format="4.0">
+  <axes>
+    <axis default="400" maximum="700" minimum="400" name="Weight" tag="wght" />
+  </axes>
+
+  <sources>
+    <source filename="Regular.ufo" stylename="Regular">
+      <info copy="1" />
+      <location>
+        <dimension name="Weight" xvalue="400" />
+      </location>
+    </source>
+    <source filename="Bold.ufo" stylename="Bold">
+      <location>
+        <dimension name="Weight" xvalue="700" />
+      </location>
+    </source>
+  </sources>
+
+  <instances>
+    <instance stylename="Regular">
+      <location>
+        <dimension name="Weight" xvalue="400" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+    <instance stylename="Bold">
+      <location>
+        <dimension name="Weight" xvalue="700" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+  </instances>
+
+</designspace>
+</file>
+
+<file path="tests/data/elided_fallback/IntegerCorrect.stylespace">
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <!-- Test: 'elided_fallback_name_id' present with explicit integer name ID -->
+    <key>elided_fallback_name_id</key>
+    <integer>3</integer>
+
+    <!-- Other data that is mandatory to create a sensible STAT but not tested here -->
+    <key>axes</key>
+    <array>
+      <dict>
+        <key>name</key>
+        <string>Weight</string>
+        <key>tag</key>
+        <string>wght</string>
+        <key>locations</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>Regular</string>
+            <key>value</key>
+            <integer>400</integer>
+            <key>linked_value</key>
+            <integer>700</integer>
+            <key>flags</key>
+            <array>
+              <string>ElidableAxisValueName</string>
+            </array>
+          </dict>
+          <dict>
+            <key>name</key>
+            <dict>
+              <key>en</key>
+              <string>Bold</string>
+            </dict>
+            <key>value</key>
+            <integer>700</integer>
+          </dict>
+        </array>
+      </dict>
+    </array>
+  </dict>
+</plist>
+</file>
+
+<file path="tests/data/elided_fallback/IntegerInvalid.stylespace">
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <!-- Test: 'elided_fallback_name_id' present with explicit integer name ID that is missing in the font -->
+    <key>elided_fallback_name_id</key>
+    <integer>12345678</integer>
+
+    <!-- Other data that is mandatory to create a sensible STAT but not tested here -->
+    <key>axes</key>
+    <array>
+      <dict>
+        <key>name</key>
+        <string>Weight</string>
+        <key>tag</key>
+        <string>wght</string>
+        <key>locations</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>Regular</string>
+            <key>value</key>
+            <integer>400</integer>
+            <key>linked_value</key>
+            <integer>700</integer>
+            <key>flags</key>
+            <array>
+              <string>ElidableAxisValueName</string>
+            </array>
+          </dict>
+          <dict>
+            <key>name</key>
+            <dict>
+              <key>en</key>
+              <string>Bold</string>
+            </dict>
+            <key>value</key>
+            <integer>700</integer>
+          </dict>
+        </array>
+      </dict>
+    </array>
+  </dict>
+</plist>
+</file>
+
+<file path="tests/data/elided_fallback/NameRecord.stylespace">
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <!-- Test: 'elided_fallback_name_id' present with a NameRecord (in this case, just a string) -->
+    <key>elided_fallback_name_id</key>
+    <string>expected</string>
+
+    <!-- Other data that is mandatory to create a sensible STAT but not tested here -->
+    <key>axes</key>
+    <array>
+      <dict>
+        <key>name</key>
+        <string>Weight</string>
+        <key>tag</key>
+        <string>wght</string>
+        <key>locations</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>Regular</string>
+            <key>value</key>
+            <integer>400</integer>
+            <key>linked_value</key>
+            <integer>700</integer>
+            <key>flags</key>
+            <array>
+              <string>ElidableAxisValueName</string>
+            </array>
+          </dict>
+          <dict>
+            <key>name</key>
+            <dict>
+              <key>en</key>
+              <string>Bold</string>
+            </dict>
+            <key>value</key>
+            <integer>700</integer>
+          </dict>
+        </array>
+      </dict>
+    </array>
+  </dict>
+</plist>
+</file>
+
+<file path="tests/data/Test_WghtItal_Multilingual.designspace">
+<?xml version="1.0" encoding="utf-8"?>
+<designspace format="4.0">
+  <axes>
+    <axis default="400" maximum="700" minimum="300" name="Weight" tag="wght">
+      <map input="300" output="0" />
+      <map input="400" output="500" />
+      <map input="700" output="1000" />
+    </axis>
+    <axis default="0" maximum="1" minimum="0" name="Italic" tag="ital"/>
+  </axes>
+
+  <sources>
+    <source filename="master1.ufo" stylename="Extra Light">
+      <info copy="1" />
+      <location>
+        <dimension name="Weight" xvalue="0" />
+        <dimension name="Italic" xvalue="0" />
+      </location>
+    </source>
+    <source filename="master2.ufo" stylename="Black">
+      <location>
+        <dimension name="Weight" xvalue="1000" />
+        <dimension name="Italic" xvalue="0" />
+      </location>
+    </source>
+    <source filename="master1-ital.ufo" stylename="Extra Light Italic">
+      <location>
+        <dimension name="Weight" xvalue="0" />
+        <dimension name="Italic" xvalue="1" />
+      </location>
+    </source>
+    <source filename="master2-ital.ufo" stylename="Black Italic">
+      <location>
+        <dimension name="Weight" xvalue="1000" />
+        <dimension name="Italic" xvalue="1" />
+      </location>
+    </source>
+  </sources>
+
+  <instances>
+    <instance stylename="Light">
+      <location>
+        <dimension name="Weight" xvalue="0" />
+        <dimension name="Italic" xvalue="0" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+    <instance stylename="Regular">
+      <location>
+        <dimension name="Weight" xvalue="500" />
+        <dimension name="Italic" xvalue="0" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+    <instance stylename="Bold">
+      <location>
+        <dimension name="Weight" xvalue="1000" />
+        <dimension name="Italic" xvalue="0" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+
+    <instance stylename="Light Italic">
+      <location>
+        <dimension name="Weight" xvalue="0" />
+        <dimension name="Italic" xvalue="1" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+    <instance stylename="Italic">
+      <location>
+        <dimension name="Weight" xvalue="500" />
+        <dimension name="Italic" xvalue="1" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+    <instance stylename="Bold Italic">
+      <location>
+        <dimension name="Weight" xvalue="1000" />
+        <dimension name="Italic" xvalue="1" />
+      </location>
+      <kerning />
+      <info />
+    </instance>
+
+  </instances>
+</designspace>
+</file>
+
+<file path="tests/data/TestDuplicateValue.stylespace">
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>axes</key>
+    <array>
+
+      <dict>
+        <key>name</key>
+        <string>Weight</string>
+        <key>tag</key>
+        <string>wght</string>
+
+        <key>locations</key>
+        <array>
+
+          <dict>
+            <key>name</key>
+            <string>Regular</string>
+            <key>value</key>
+            <integer>400</integer>
+            <key>range</key>
+            <array>
+              <integer>350</integer>
+              <integer>500</integer>
+            </array>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <string>Regular</string>
+            <key>value</key>
+            <integer>400</integer>
+            <key>linked_value</key>
+            <integer>700</integer>
+            <key>flags</key>
+            <array>
+              <string>ElidableAxisValueName</string>
+            </array>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <string>Bold</string>
+            <key>value</key>
+            <integer>700</integer>
+          </dict>
+
+        </array>
+      </dict>
+
+    </array>
+  </dict>
+</plist>
+</file>
+
+<file path="tests/data/TestDuplicateValueFormat4.stylespace">
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>axes</key>
+    <array>
+
+      <dict>
+        <key>name</key>
+        <string>Weight</string>
+        <key>tag</key>
+        <string>wght</string>
+
+        <key>locations</key>
+        <array/>
+      </dict>
+
+    </array>
+
+    <key>locations</key>
+    <array>
+
+      <!--
+        A format 4 dictionary must contain `name` and `axis_values`, the latter
+        is a dictionary of axis names to values. `flags` are optional.
+      -->
+      <dict>
+        <key>name</key>
+        <string>ASDF</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>333</integer>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>fgfg</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>333</integer>
+        </dict>
+        <key>flags</key>
+        <array>
+          <string>ElidableAxisValueName</string>
+        </array>
+      </dict>
+
+    </array>
+
+  </dict>
+</plist>
+</file>
+
+<file path="tests/data/TestExternalStylespace.designspace">
+<?xml version="1.0" encoding="utf-8"?>
+<designspace format="4.0">
+  <axes>
+    <axis default="200" maximum="900" minimum="200" name="Weight" tag="wght">
+      <map input="200" output="0" />
+      <map input="300" output="100" />
+      <map input="333" output="333" />
+      <map input="400" output="368" />
+      <map input="600" output="600" />
+      <map input="650" output="789" />
+      <map input="700" output="824" />
+      <map input="900" output="1000" />
+    </axis>
+  </axes>
+
+  <sources>
+    <source filename="master1.ufo" stylename="Extra Light">
+      <location>
+        <dimension name="Weight" xvalue="0" />
+      </location>
+    </source>
+    <source filename="master2.ufo" stylename="Black">
+      <location>
+        <dimension name="Weight" xvalue="1000" />
+      </location>
+    </source>
+  </sources>
+
+  <instances>
+    <instance stylename="Extra Light">
+      <location>
+        <dimension name="Weight" xvalue="0" />
+      </location>
+    </instance>
+    <instance stylename="Light">
+      <location>
+        <dimension name="Weight" xvalue="100" />
+      </location>
+    </instance>
+    <instance stylename="Regular">
+      <location>
+        <dimension name="Weight" xvalue="368" />
+      </location>
+    </instance>
+    <instance stylename="Semi Bold">
+      <location>
+        <dimension name="Weight" xvalue="600" />
+      </location>
+    </instance>
+    <instance stylename="Bold">
+      <location>
+        <dimension name="Weight" xvalue="824" />
+      </location>
+    </instance>
+    <instance stylename="Black">
+      <location>
+        <dimension name="Weight" xvalue="1000" />
+      </location>
+    </instance>
+  </instances>
+
+  <lib>
+    <dict>
+      <key>org.statmake.stylespacePath</key>
+      <string>Test.stylespace</string>
+      <key>org.statmake.additionalLocations</key>
+      <dict>
+        <key>Italic</key>
+        <integer>0</integer>
+      </dict>
+    </dict>
+  </lib>
+</designspace>
+</file>
+
+<file path="tests/data/TestMissingLinkedValue.stylespace">
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>axes</key>
+    <array>
+
+      <dict>
+        <key>name</key>
+        <string>Weight</string>
+        <key>tag</key>
+        <string>wght</string>
+
+        <key>locations</key>
+        <array>
+
+          <dict>
+            <key>name</key>
+            <string>Regular</string>
+            <key>value</key>
+            <integer>400</integer>
+            <key>linked_value</key>
+            <integer>100</integer>
+            <key>flags</key>
+            <array>
+              <string>ElidableAxisValueName</string>
+            </array>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <dict>
+              <key>en</key>
+              <string>Bold</string>
+            </dict>
+            <key>value</key>
+            <integer>700</integer>
+          </dict>
+
+        </array>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>Italic</string>
+        <key>tag</key>
+        <string>ital</string>
+        <key>locations</key>
+        <array>
+
+          <dict>
+            <key>name</key>
+            <string>Upright</string>
+            <key>value</key>
+            <integer>0</integer>
+            <key>linked_value</key>
+            <integer>1</integer>
+            <key>flags</key>
+            <array>
+              <string>ElidableAxisValueName</string>
+            </array>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <string>Italic</string>
+            <key>value</key>
+            <integer>1</integer>
+          </dict>
+
+        </array>
+      </dict>
+    </array>
+
+  </dict>
+</plist>
+</file>
+
+<file path="tests/data/TestMultilingualBrokenAxisNameLang.stylespace">
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>axes</key>
+    <array>
+
+      <dict>
+        <key>name</key>
+        <dict>
+          <key>en</key>
+          <string>Weight</string>
+          <key>de</key>
+          <string>Gäwicht</string>
+        </dict>
+        <key>tag</key>
+        <string>wght</string>
+
+        <key>locations</key>
+        <array>
+
+          <dict>
+            <key>name</key>
+            <string>Light</string>
+            <key>value</key>
+            <integer>300</integer>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <dict>
+              <key>en</key>
+              <string>Regular</string>
+              <key>de</key>
+              <string>Regulär</string>
+            </dict>
+            <key>value</key>
+            <integer>400</integer>
+            <key>linked_value</key>
+            <integer>700</integer>
+            <key>flags</key>
+            <array>
+              <string>ElidableAxisValueName</string>
+            </array>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <dict>
+              <key>en</key>
+              <string>Bold</string>
+              <key>fr</key>
+              <string>Bôld</string>
+            </dict>
+            <key>value</key>
+            <integer>700</integer>
+          </dict>
+
+        </array>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <dict>
+          <key>en</key>
+          <string>Italic</string>
+          <key>de</key>
+          <string>Italienisch</string>
+        </dict>
+        <key>tag</key>
+        <string>ital</string>
+        <key>locations</key>
+        <array>
+
+          <dict>
+            <key>name</key>
+            <dict>
+              <key>en</key>
+              <string>Upright</string>
+              <key>de</key>
+              <string>Aufrecht</string>
+            </dict>
+            <key>value</key>
+            <integer>0</integer>
+            <key>linked_value</key>
+            <integer>1</integer>
+            <key>flags</key>
+            <array>
+              <string>ElidableAxisValueName</string>
+            </array>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <dict>
+              <key>en</key>
+              <string>Italic</string>
+              <key>de</key>
+              <string>Italienisch</string>
+            </dict>
+            <key>value</key>
+            <integer>1</integer>
+          </dict>
+
+        </array>
+      </dict>
+    </array>
+
+  </dict>
+</plist>
+</file>
+
+<file path="tests/data/TestMultilingualBrokenLocNameLang.stylespace">
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>axes</key>
+    <array>
+
+      <dict>
+        <key>name</key>
+        <dict>
+          <key>en</key>
+          <string>Weight</string>
+          <key>de</key>
+          <string>Gäwicht</string>
+        </dict>
+        <key>tag</key>
+        <string>wght</string>
+
+        <key>locations</key>
+        <array>
+
+        </array>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <dict>
+          <key>en</key>
+          <string>Italic</string>
+          <key>de</key>
+          <string>Italienisch</string>
+        </dict>
+        <key>tag</key>
+        <string>ital</string>
+        <key>locations</key>
+        <array>
+
+          <dict>
+            <key>name</key>
+            <dict>
+              <key>en</key>
+              <string>Upright</string>
+              <key>de</key>
+              <string>Aufrecht</string>
+            </dict>
+            <key>value</key>
+            <integer>0</integer>
+            <key>linked_value</key>
+            <integer>1</integer>
+            <key>flags</key>
+            <array>
+              <string>ElidableAxisValueName</string>
+            </array>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <dict>
+              <key>en</key>
+              <string>Italic</string>
+            </dict>
+            <key>value</key>
+            <integer>1</integer>
+          </dict>
+
+        </array>
+      </dict>
+    </array>
+
+  </dict>
+</plist>
+</file>
+
+<file path="tests/data/TestMultilingualNoEn.stylespace">
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>axes</key>
+    <array>
+
+      <dict>
+        <key>name</key>
+        <dict>
+          <key>de</key>
+          <string>Gäwicht</string>
+        </dict>
+        <key>tag</key>
+        <string>wght</string>
+
+        <key>locations</key>
+        <array>
+
+          <dict>
+            <key>name</key>
+            <string>Light</string>
+            <key>value</key>
+            <integer>300</integer>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <dict>
+              <key>en</key>
+              <string>Regular</string>
+              <key>de</key>
+              <string>Regulär</string>
+            </dict>
+            <key>value</key>
+            <integer>400</integer>
+            <key>linked_value</key>
+            <integer>700</integer>
+            <key>flags</key>
+            <array>
+              <string>ElidableAxisValueName</string>
+            </array>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <dict>
+              <key>en</key>
+              <string>Bold</string>
+              <key>fr</key>
+              <string>Bôld</string>
+            </dict>
+            <key>value</key>
+            <integer>700</integer>
+          </dict>
+
+        </array>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <dict>
+          <key>en</key>
+          <string>Italic</string>
+          <key>de</key>
+          <string>Italienisch</string>
+        </dict>
+        <key>tag</key>
+        <string>ital</string>
+        <key>locations</key>
+        <array>
+
+          <dict>
+            <key>name</key>
+            <dict>
+              <key>en</key>
+              <string>Upright</string>
+              <key>de</key>
+              <string>Aufrecht</string>
+            </dict>
+            <key>value</key>
+            <integer>0</integer>
+            <key>linked_value</key>
+            <integer>1</integer>
+            <key>flags</key>
+            <array>
+              <string>ElidableAxisValueName</string>
+            </array>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <dict>
+              <key>en</key>
+              <string>Italic</string>
+              <key>de</key>
+              <string>Italienisch</string>
+            </dict>
+            <key>value</key>
+            <integer>1</integer>
+          </dict>
+
+        </array>
+      </dict>
+    </array>
+
+  </dict>
+</plist>
+</file>
+
+<file path="tests/conftest.py">
+from pathlib import Path
+
+import pytest
+
+
+@pytest.fixture
+def datadir() -> Path:
+    return Path(__file__).parent / "data"
+</file>
+
+<file path="tests/test_elided_fallback.py">
+import pytest
+
+from statmake.errors import Error
+
+from . import testutil
+
+
+def test_elided_fallback_default(datadir):
+    """Test that the default value for the elided fallback name is name ID 2
+    when the stylespace key is omitted."""
+
+    varfont = testutil.generate_variable_font(
+        datadir / "elided_fallback" / "Font.designspace",
+        datadir / "elided_fallback" / "Default.stylespace",
+    )
+
+    stat_table = varfont["STAT"]
+
+    actual = stat_table.table.ElidedFallbackNameID
+    assert actual == 2
+
+
+def test_elided_fallback_int(datadir):
+    """Test that an explicit integer name ID for the elided fallback name is
+    parsed and applied from the stylespace."""
+
+    varfont = testutil.generate_variable_font(
+        datadir / "elided_fallback" / "Font.designspace",
+        datadir / "elided_fallback" / "IntegerCorrect.stylespace",
+    )
+
+    stat_table = varfont["STAT"]
+
+    actual = stat_table.table.ElidedFallbackNameID
+    assert actual == 3
+
+
+def test_elided_fallback_int_invalid(datadir):
+    """Test that statmake will refuse to generate a STAT if the name ID integer
+    specified for the elided fallback name does not exist in the final TTF."""
+
+    with pytest.raises(
+        Error, match=r"No English record for id 12345678 for Windows platform"
+    ):
+        testutil.generate_variable_font(
+            datadir / "elided_fallback" / "Font.designspace",
+            datadir / "elided_fallback" / "IntegerInvalid.stylespace",
+        )
+
+
+def test_elided_fallback_name_record(datadir):
+    """Test that an explicit NameRecord (e.g. a string) for the elided fallback
+    name is parsed and applied from the stylespace."""
+
+    varfont = testutil.generate_variable_font(
+        datadir / "elided_fallback" / "Font.designspace",
+        datadir / "elided_fallback" / "NameRecord.stylespace",
+    )
+
+    stat_table = varfont["STAT"]
+
+    actual = varfont["name"].getDebugName(stat_table.table.ElidedFallbackNameID)
+    assert actual == "expected"
+</file>
+
+<file path="tests/test_serialize.py">
+from pathlib import Path
+
+from statmake.classes import Stylespace
+
+
+def test_serialize(datadir: Path) -> None:
+    stylespace = Stylespace.from_file(datadir / "Test.stylespace")
+    stylespace_rt = Stylespace.from_dict(stylespace.to_dict())
+    assert stylespace == stylespace_rt
+</file>
+
+<file path=".coveragerc">
+[run]
+# measure 'branch' coverage in addition to 'statement' coverage
+# See: http://coverage.readthedocs.org/en/coverage-4.0.3/branch.html#branch
+branch = True
+parallel = True
+
+# list of directories or packages to measure
+source = statmake
+
+# these are treated as equivalent when combining data
+[paths]
+source =
+    statmake
+    */site-packages
+
+[report]
+# Regexes for lines to exclude from consideration
+exclude_lines =
+    # keywords to use in inline comments to skip coverage
+    pragma: no cover
+
+    # don't complain if tests don't hit defensive assertion code
+    raise AssertionError
+    raise NotImplementedError
+
+    # don't complain if non-runnable code isn't run
+    if 0:
+    if __name__ == .__main__.:
+
+# ignore source code that can’t be found
+ignore_errors = True
+</file>
+
+<file path="src/statmake/__main__.py">
+import statmake.cli
+
+if __name__ == "__main__":
+    statmake.cli.main()
+</file>
+
+<file path="tests/data/Test.stylespace">
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <!-- The top level `axes` key defines a list of axis definitions -->
+    <key>axes</key>
+    <array>
+
+      <!--
+        Each axis definition must have a `name` and the axis `tag` (duplicate
+        the information from the Designspace). `locations` is optional, if you
+        only use format 4 axis values, you don't need to define `locations` on
+        an axis.
+
+        Note that `name` can always be either a string or a dictionary of IETF
+        BCP 47 language codes to name strings. See "Regular" below for how this
+        looks like. If it is a string, it will be used to create a name table
+        entry with it for the language "en" or language ID 0x0409. If it is a
+        dictionary, it will automatically create appropriate multilingual name
+        table entries.
+
+        The `name` of an axis is a special case: You can define a dictionary
+        with name mappings, but it's only going to be used if the axis doesn't
+        already exist in the fvar table. Reason: you can use the `labelname`
+        element in the `axis` element in a Designspace to define multilingual
+        names. You can't when you don't define the axis, so you can do it in
+        the Stylespace instead.
+      -->
+      <dict>
+        <key>name</key>
+        <string>Weight</string>
+        <key>tag</key>
+        <string>wght</string>
+
+        <!--
+          `locations` are a list of dictionaries describing stops on the axis. Each
+          dictionary models one of format 1, 2 and 3 of the STAT axis values.
+        -->
+        <key>locations</key>
+        <array>
+          <!--
+            Format 1 must have at least `name` and `value`. `flags` is optional, see
+            below.
+
+            IMPORTANT: The `value` always means value in user space like in the
+            fvar table!
+          -->
+          <dict>
+            <key>name</key>
+            <string>XLight</string>
+            <key>value</key>
+            <integer>200</integer>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <string>Light</string>
+            <key>value</key>
+            <integer>300</integer>
+          </dict>
+
+          <!--
+            Format 3 must have at least `name`, `value` and `linked_value`. `flags` is
+            optional.
+          -->
+          <dict>
+            <!-- This is an example of how to define multilingual names. -->
+            <key>name</key>
+            <string>Regular</string>
+            <key>value</key>
+            <integer>400</integer>
+            <key>linked_value</key>
+            <integer>700</integer>
+            <!--
+              Flags is a list and can contain the strings "ElidableAxisValueName",
+              "OlderSiblingFontAttribute" or both.
+            -->
+            <key>flags</key>
+            <array>
+              <string>ElidableAxisValueName</string>
+            </array>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <string>Semi Bold</string>
+            <key>value</key>
+            <integer>600</integer>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <dict>
+              <key>en</key>
+              <string>Bold</string>
+            </dict>
+            <key>value</key>
+            <integer>700</integer>
+          </dict>
+
+          <!--
+            Format 2 must have at least `name`, `value` and `range` with (min,
+            max) values. `flags` is optional.
+          -->
+          <dict>
+            <key>name</key>
+            <string>Black</string>
+            <key>value</key>
+            <integer>900</integer>
+            <key>range</key>
+            <array>
+              <integer>701</integer>
+              <integer>900</integer>
+            </array>
+          </dict>
+
+        </array>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>Italic</string>
+        <key>tag</key>
+        <string>ital</string>
+        <key>locations</key>
+        <array>
+
+          <dict>
+            <key>name</key>
+            <string>Upright</string>
+            <key>value</key>
+            <integer>0</integer>
+            <key>linked_value</key>
+            <integer>1</integer>
+            <key>flags</key>
+            <array>
+              <string>ElidableAxisValueName</string>
+            </array>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <string>Italic</string>
+            <key>value</key>
+            <integer>1</integer>
+          </dict>
+
+        </array>
+      </dict>
+    </array>
+
+    <!--
+      The top-level `locations` key is a list of format 4 axis values. It is
+      optional and can be left out from the Stylespace if you don't need format
+      4 axis values.
+
+      ATTENTION: Using format 4 axis values bumps the STAT table version from 1.1 to
+      1.2. At the time of this writing (February 2019), version 1.2 is not supported by
+      Windows.
+    -->
+    <key>locations</key>
+    <array>
+
+      <!--
+        A format 4 dictionary must contain `name` and `axis_values`, the latter
+        is a dictionary of axis names to values. `flags` are optional.
+      -->
+      <dict>
+        <key>name</key>
+        <string>ASDF</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>333</integer>
+          <key>Italic</key>
+          <integer>1</integer>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>fgfg</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>650</integer>
+          <key>Italic</key>
+          <real>0.5</real>
+        </dict>
+        <key>flags</key>
+        <array>
+          <string>ElidableAxisValueName</string>
+        </array>
+      </dict>
+
+    </array>
+
+    <!--
+      This name is used for the font if all other axis-value names have been
+      elided.
+
+      As with the name records above, it may be specified either as a string or as
+      a dictionary of IETF BCP 47 language codes to name strings, however, this
+      particular field may also be provided as a raw name ID integer when an
+      existing name table record should be explicitly reused.
+
+      If this property is absent, statmake will default to reusing nameID=2.
+    -->
+    <key>elided_fallback_name_id</key>
+    <string>Regular</string>
+  </dict>
+</plist>
+</file>
+
+<file path="tests/data/TestBogusFormat4_2.stylespace">
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>axes</key>
+    <array>
+
+      <dict>
+        <key>name</key>
+        <string>Weight</string>
+        <key>tag</key>
+        <string>wght</string>
+
+        <key>locations</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>XLight</string>
+            <key>value</key>
+            <integer>200</integer>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <string>Light</string>
+            <key>value</key>
+            <integer>300</integer>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <string>Regular</string>
+            <key>value</key>
+            <integer>400</integer>
+            <key>linked_value</key>
+            <integer>700</integer>
+            <key>flags</key>
+            <array>
+              <string>ElidableAxisValueName</string>
+            </array>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <string>Semi Bold</string>
+            <key>value</key>
+            <integer>600</integer>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <dict>
+              <key>en</key>
+              <string>Bold</string>
+            </dict>
+            <key>value</key>
+            <integer>700</integer>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <string>Black</string>
+            <key>value</key>
+            <integer>900</integer>
+            <key>range</key>
+            <array>
+              <integer>701</integer>
+              <integer>900</integer>
+            </array>
+          </dict>
+
+        </array>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>Italic</string>
+        <key>tag</key>
+        <string>ital</string>
+        <key>locations</key>
+        <array>
+
+          <dict>
+            <key>name</key>
+            <string>Upright</string>
+            <key>value</key>
+            <integer>0</integer>
+            <key>linked_value</key>
+            <integer>1</integer>
+            <key>flags</key>
+            <array>
+              <string>ElidableAxisValueName</string>
+            </array>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <string>Italic</string>
+            <key>value</key>
+            <integer>1</integer>
+          </dict>
+
+        </array>
+      </dict>
+    </array>
+
+    <key>locations</key>
+    <array>
+      <dict>
+        <key>name</key>
+        <string>ASDF</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>333</integer>
+          <key>Fooooo</key>
+          <integer>333</integer>
+        </dict>
+      </dict>
+
+    </array>
+  </dict>
+</plist>
+</file>
+
+<file path="tests/data/TestBogusFormat4.stylespace">
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>axes</key>
+    <array>
+
+      <dict>
+        <key>name</key>
+        <string>Weight</string>
+        <key>tag</key>
+        <string>wght</string>
+
+        <key>locations</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>XLight</string>
+            <key>value</key>
+            <integer>200</integer>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <string>Light</string>
+            <key>value</key>
+            <integer>300</integer>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <string>Regular</string>
+            <key>value</key>
+            <integer>400</integer>
+            <key>linked_value</key>
+            <integer>700</integer>
+            <key>flags</key>
+            <array>
+              <string>ElidableAxisValueName</string>
+            </array>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <string>Semi Bold</string>
+            <key>value</key>
+            <integer>600</integer>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <dict>
+              <key>en</key>
+              <string>Bold</string>
+            </dict>
+            <key>value</key>
+            <integer>700</integer>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <string>Black</string>
+            <key>value</key>
+            <integer>900</integer>
+            <key>range</key>
+            <array>
+              <integer>701</integer>
+              <integer>900</integer>
+            </array>
+          </dict>
+
+        </array>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>Italic</string>
+        <key>tag</key>
+        <string>ital</string>
+        <key>locations</key>
+        <array>
+
+          <dict>
+            <key>name</key>
+            <string>Upright</string>
+            <key>value</key>
+            <integer>0</integer>
+            <key>linked_value</key>
+            <integer>1</integer>
+            <key>flags</key>
+            <array>
+              <string>ElidableAxisValueName</string>
+            </array>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <string>Italic</string>
+            <key>value</key>
+            <integer>1</integer>
+          </dict>
+
+        </array>
+      </dict>
+    </array>
+
+    <key>locations</key>
+    <array>
+      <dict>
+        <key>name</key>
+        <string>ASDF</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>333</integer>
+        </dict>
+      </dict>
+
+    </array>
+  </dict>
+</plist>
+</file>
+
+<file path="tests/data/TestInlineStylespace.designspace">
+<?xml version="1.0" encoding="utf-8"?>
+<designspace format="4.0">
+  <axes>
+    <axis default="200" maximum="900" minimum="200" name="Weight" tag="wght">
+      <map input="200" output="0" />
+      <map input="300" output="100" />
+      <map input="333" output="333" />
+      <map input="400" output="368" />
+      <map input="600" output="600" />
+      <map input="650" output="789" />
+      <map input="700" output="824" />
+      <map input="900" output="1000" />
+    </axis>
+  </axes>
+
+  <sources>
+    <source filename="master1.ufo" stylename="Extra Light">
+      <location>
+        <dimension name="Weight" xvalue="0" />
+      </location>
+    </source>
+    <source filename="master2.ufo" stylename="Black">
+      <location>
+        <dimension name="Weight" xvalue="1000" />
+      </location>
+    </source>
+  </sources>
+
+  <instances>
+    <instance stylename="Extra Light">
+      <location>
+        <dimension name="Weight" xvalue="0" />
+      </location>
+    </instance>
+    <instance stylename="Light">
+      <location>
+        <dimension name="Weight" xvalue="100" />
+      </location>
+    </instance>
+    <instance stylename="Regular">
+      <location>
+        <dimension name="Weight" xvalue="368" />
+      </location>
+    </instance>
+    <instance stylename="Semi Bold">
+      <location>
+        <dimension name="Weight" xvalue="600" />
+      </location>
+    </instance>
+    <instance stylename="Bold">
+      <location>
+        <dimension name="Weight" xvalue="824" />
+      </location>
+    </instance>
+    <instance stylename="Black">
+      <location>
+        <dimension name="Weight" xvalue="1000" />
+      </location>
+    </instance>
+  </instances>
+
+  <lib>
+    <dict>
+      <key>org.statmake.stylespace</key>
+      <dict>
+        <key>axes</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>Weight</string>
+            <key>tag</key>
+            <string>wght</string>
+            <key>locations</key>
+            <array>
+              <dict>
+                <key>name</key>
+                <string>XLight</string>
+                <key>value</key>
+                <integer>200</integer>
+              </dict>
+              <dict>
+                <key>name</key>
+                <string>Light</string>
+                <key>value</key>
+                <integer>300</integer>
+              </dict>
+              <dict>
+                <key>name</key>
+                <string>Regular</string>
+                <key>value</key>
+                <integer>400</integer>
+                <key>linked_value</key>
+                <integer>700</integer>
+                <key>flags</key>
+                <array>
+                  <string>ElidableAxisValueName</string>
+                </array>
+              </dict>
+              <dict>
+                <key>name</key>
+                <string>Semi Bold</string>
+                <key>value</key>
+                <integer>600</integer>
+              </dict>
+              <dict>
+                <key>name</key>
+                <dict>
+                  <key>en</key>
+                  <string>Bold</string>
+                </dict>
+                <key>value</key>
+                <integer>700</integer>
+              </dict>
+              <dict>
+                <key>name</key>
+                <string>Black</string>
+                <key>value</key>
+                <integer>900</integer>
+                <key>range</key>
+                <array>
+                  <integer>701</integer>
+                  <integer>900</integer>
+                </array>
+              </dict>
+            </array>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>Italic</string>
+            <key>tag</key>
+            <string>ital</string>
+            <key>locations</key>
+            <array>
+              <dict>
+                <key>name</key>
+                <string>Upright</string>
+                <key>value</key>
+                <integer>0</integer>
+                <key>linked_value</key>
+                <integer>1</integer>
+                <key>flags</key>
+                <array>
+                  <string>ElidableAxisValueName</string>
+                </array>
+              </dict>
+              <dict>
+                <key>name</key>
+                <string>Italic</string>
+                <key>value</key>
+                <integer>1</integer>
+              </dict>
+            </array>
+          </dict>
+        </array>
+      </dict>
+      <key>org.statmake.additionalLocations</key>
+      <dict>
+        <key>Italic</key>
+        <integer>0</integer>
+      </dict>
+    </dict>
+  </lib>
+</designspace>
+</file>
+
+<file path="tests/data/TestItalIsSlnt.stylespace">
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <!-- The top level `axes` key defines a list of axis definitions -->
+    <key>axes</key>
+    <array>
+
+      <!--
+        Each axis definition must have a `name` and the axis `tag` (duplicate
+        the information from the Designspace). `locations` is optional, if you
+        only use format 4 axis values, you don't need to define `locations` on
+        an axis.
+
+        Note that `name` can always be either a string or a dictionary of IETF
+        BCP 47 language codes to name strings. See "Regular" below for how this
+        looks like. If it is a string, it will be used to create a name table
+        entry with it for the language "en" or language ID 0x0409. If it is a
+        dictionary, it will automatically create appropriate multilingual name
+        table entries.
+
+        The `name` of an axis is a special case: You can define a dictionary
+        with name mappings, but it's only going to be used if the axis doesn't
+        already exist in the fvar table. Reason: you can use the `labelname`
+        element in the `axis` element in a Designspace to define multilingual
+        names. You can't when you don't define the axis, so you can do it in
+        the Stylespace instead.
+      -->
+      <dict>
+        <key>name</key>
+        <string>Weight</string>
+        <key>tag</key>
+        <string>wght</string>
+
+        <!--
+          `locations` are a list of dictionaries describing stops on the axis. Each
+          dictionary models one of format 1, 2 and 3 of the STAT axis values.
+        -->
+        <key>locations</key>
+        <array>
+          <!--
+            Format 1 must have at least `name` and `value`. `flags` is optional, see
+            below.
+
+            IMPORTANT: The `value` always means value in user space like in the
+            fvar table!
+          -->
+          <dict>
+            <key>name</key>
+            <string>XLight</string>
+            <key>value</key>
+            <integer>200</integer>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <string>Light</string>
+            <key>value</key>
+            <integer>300</integer>
+          </dict>
+
+          <!--
+            Format 3 must have at least `name`, `value` and `linked_value`. `flags` is
+            optional.
+          -->
+          <dict>
+            <!-- This is an example of how to define multilingual names. -->
+            <key>name</key>
+            <string>Regular</string>
+            <key>value</key>
+            <integer>400</integer>
+            <key>linked_value</key>
+            <integer>700</integer>
+            <!--
+              Flags is a list and can contain the strings "ElidableAxisValueName",
+              "OlderSiblingFontAttribute" or both.
+            -->
+            <key>flags</key>
+            <array>
+              <string>ElidableAxisValueName</string>
+            </array>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <string>Semi Bold</string>
+            <key>value</key>
+            <integer>600</integer>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <dict>
+              <key>en</key>
+              <string>Bold</string>
+            </dict>
+            <key>value</key>
+            <integer>700</integer>
+          </dict>
+
+          <!--
+            Format 2 must have at least `name`, `value` and `range` with (min,
+            max) values. `flags` is optional.
+          -->
+          <dict>
+            <key>name</key>
+            <string>Black</string>
+            <key>value</key>
+            <integer>900</integer>
+            <key>range</key>
+            <array>
+              <integer>701</integer>
+              <integer>900</integer>
+            </array>
+          </dict>
+
+        </array>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>Italic</string>
+        <key>tag</key>
+        <string>slnt</string>
+        <key>locations</key>
+        <array>
+
+          <dict>
+            <key>name</key>
+            <string>Upright</string>
+            <key>value</key>
+            <integer>0</integer>
+            <key>linked_value</key>
+            <integer>1</integer>
+            <key>flags</key>
+            <array>
+              <string>ElidableAxisValueName</string>
+            </array>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <string>Italic</string>
+            <key>value</key>
+            <integer>1</integer>
+          </dict>
+
+        </array>
+      </dict>
+    </array>
+
+    <!--
+      The top-level `locations` key is a list of format 4 axis values. It is
+      optional and can be left out from the Stylespace if you don't need format
+      4 axis values.
+
+      ATTENTION: Using format 4 axis values bumps the STAT table version from 1.1 to
+      1.2. At the time of this writing (February 2019), version 1.2 is not supported by
+      Windows.
+    -->
+    <key>locations</key>
+    <array>
+
+      <!--
+        A format 4 dictionary must contain `name` and `axis_values`, the latter
+        is a dictionary of axis names to values. `flags` are optional.
+      -->
+      <dict>
+        <key>name</key>
+        <string>ASDF</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>333</integer>
+          <key>Italic</key>
+          <integer>1</integer>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>fgfg</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>650</integer>
+          <key>Italic</key>
+          <real>0.5</real>
+        </dict>
+        <key>flags</key>
+        <array>
+          <string>ElidableAxisValueName</string>
+        </array>
+      </dict>
+
+    </array>
+  </dict>
+</plist>
+</file>
+
+<file path="tests/data/TestJustWght.stylespace">
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>axes</key>
+    <array>
+
+      <dict>
+        <key>name</key>
+        <string>Weight</string>
+        <key>tag</key>
+        <string>wght</string>
+
+        <key>locations</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>XLight</string>
+            <key>value</key>
+            <integer>200</integer>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <string>Light</string>
+            <key>value</key>
+            <integer>300</integer>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <string>Regular</string>
+            <key>value</key>
+            <integer>400</integer>
+            <key>linked_value</key>
+            <integer>700</integer>
+            <key>flags</key>
+            <array>
+              <string>ElidableAxisValueName</string>
+            </array>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <string>Semi Bold</string>
+            <key>value</key>
+            <integer>600</integer>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <dict>
+              <key>en</key>
+              <string>Bold</string>
+            </dict>
+            <key>value</key>
+            <integer>700</integer>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <string>Black</string>
+            <key>value</key>
+            <integer>900</integer>
+            <key>range</key>
+            <array>
+              <integer>701</integer>
+              <integer>900</integer>
+            </array>
+          </dict>
+
+        </array>
+      </dict>
+    </array>
+
+  </dict>
+</plist>
+</file>
+
+<file path="tests/data/TestMultilingual.stylespace">
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>axes</key>
+    <array>
+
+      <dict>
+        <key>name</key>
+        <dict>
+          <key>en</key>
+          <string>Weight</string>
+          <key>de</key>
+          <string>Gäwicht</string>
+          <key>fr</key>
+          <string>Géwicht</string>
+        </dict>
+        <key>tag</key>
+        <string>wght</string>
+
+        <key>locations</key>
+        <array>
+
+          <dict>
+            <key>name</key>
+            <dict>
+              <key>en</key>
+              <string>Thin</string>
+              <key>de</key>
+              <string>Dünn</string>
+              <key>fr</key>
+              <string>Dûnn</string>
+            </dict>
+            <key>value</key>
+            <integer>200</integer>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <dict>
+              <key>en</key>
+              <string>Light</string>
+              <key>de</key>
+              <string>Leicht</string>
+              <key>fr</key>
+              <string>vfdgf</string>
+            </dict>
+            <key>value</key>
+            <integer>300</integer>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <dict>
+              <key>en</key>
+              <string>Regular</string>
+              <key>de</key>
+              <string>Regulär</string>
+              <key>fr</key>
+              <string>aaa</string>
+            </dict>
+            <key>value</key>
+            <integer>400</integer>
+            <key>linked_value</key>
+            <integer>700</integer>
+            <key>flags</key>
+            <array>
+              <string>ElidableAxisValueName</string>
+            </array>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <dict>
+              <key>en</key>
+              <string>AA</string>
+              <key>de</key>
+              <string>BB</string>
+              <key>fr</key>
+              <string>CC</string>
+            </dict>
+            <key>value</key>
+            <integer>600</integer>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <dict>
+              <key>en</key>
+              <string>Bold</string>
+              <key>de</key>
+              <string>Böld</string>
+              <key>fr</key>
+              <string>Bôld</string>
+            </dict>
+            <key>value</key>
+            <integer>700</integer>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <dict>
+              <key>en</key>
+              <string>asdf</string>
+              <key>de</key>
+              <string>asdf</string>
+              <key>fr</key>
+              <string>asdf</string>
+            </dict>
+            <key>value</key>
+            <integer>900</integer>
+          </dict>
+
+        </array>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <dict>
+          <key>en</key>
+          <string>Italic</string>
+          <key>de</key>
+          <string>Italienisch</string>
+          <key>fr</key>
+          <string>Itâlic</string>
+        </dict>
+        <key>tag</key>
+        <string>ital</string>
+        <key>locations</key>
+        <array>
+
+          <dict>
+            <key>name</key>
+            <dict>
+              <key>en</key>
+              <string>Upright</string>
+              <key>fr</key>
+              <string>Ûpright</string>
+              <key>de</key>
+              <string>Aufrecht</string>
+            </dict>
+            <key>value</key>
+            <integer>0</integer>
+            <key>linked_value</key>
+            <integer>1</integer>
+            <key>flags</key>
+            <array>
+              <string>ElidableAxisValueName</string>
+            </array>
+          </dict>
+
+          <dict>
+            <key>name</key>
+            <dict>
+              <key>en</key>
+              <string>Italic</string>
+              <key>de</key>
+              <string>Italienisch</string>
+              <key>fr</key>
+              <string>Itâlic</string>
+            </dict>
+            <key>value</key>
+            <integer>1</integer>
+          </dict>
+
+        </array>
+      </dict>
+    </array>
+
+    <key>locations</key>
+    <array>
+
+      <!--
+        A format 4 dictionary must contain `name` and `axis_values`, the latter
+        is a dictionary of axis names to values. `flags` are optional.
+      -->
+      <dict>
+        <key>name</key>
+        <dict>
+          <key>en</key>
+          <string>ASDF</string>
+          <key>de</key>
+          <string>ASDF</string>
+          <key>fr</key>
+          <string>ASDF</string>
+        </dict>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>333</integer>
+          <key>Italic</key>
+          <integer>1</integer>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <dict>
+          <key>en</key>
+          <string>FGFG</string>
+          <key>de</key>
+          <string>FGFG</string>
+          <key>fr</key>
+          <string>FGFG</string>
+        </dict>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>650</integer>
+          <key>Italic</key>
+          <real>0.5</real>
+        </dict>
+        <key>flags</key>
+        <array>
+          <string>ElidableAxisValueName</string>
+        </array>
+      </dict>
+
+    </array>
+
+  </dict>
+</plist>
+</file>
+
+<file path="src/statmake/__init__.py">
+from importlib.metadata import PackageNotFoundError, version  # type: ignore
+
+try:
+    __version__ = version(__name__)
+except PackageNotFoundError:  # pragma: no cover
+    __version__ = "unknown"
+</file>
+
+<file path="src/statmake/cli.py">
+import argparse
+import logging
+import sys
+from pathlib import Path
+from typing import List, Optional
+
+import fontTools.designspaceLib
+import fontTools.ttLib
+
+import statmake
+import statmake.classes
+import statmake.lib
+from statmake.errors import Error, StylespaceError
+
+
+def main(args: Optional[List[str]] = None) -> None:
+    logging.basicConfig(format="%(levelname)s: %(message)s")
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--version", action="version", version=statmake.__version__)
+    parser.add_argument(
+        "--stylespace",
+        type=statmake.classes.Stylespace.from_file,
+        help=(
+            "The path to the Stylespace file, if it is not contained in the "
+            "Designspace."
+        ),
+    )
+    parser.add_argument(
+        "--designspace",
+        "-m",
+        required=True,
+        type=fontTools.designspaceLib.DesignSpaceDocument.fromfile,
+        help="The path to the Designspace file used to generate the variable font.",
+    )
+    parser.add_argument(
+        "--output-path",
+        type=Path,
+        help="Write the modified font to this path instead of in-place.",
+    )
+    parser.add_argument(
+        "--mac-names",
+        action="store_true",
+        help="Generate legacy Mac name entries for each default Windows name entry.",
+    )
+    parser.add_argument(
+        "variable_font", type=Path, help="The path to the variable font file."
+    )
+    parsed_args = parser.parse_args(args)
+    designspace = parsed_args.designspace
+
+    if parsed_args.stylespace:
+        stylespace = parsed_args.stylespace
+    else:
+        try:
+            stylespace = statmake.classes.Stylespace.from_designspace(designspace)
+        except StylespaceError as e:
+            logging.error("Could not load Stylespace data from Designspace: %s", str(e))
+            sys.exit(1)
+    additional_locations = designspace.lib.get("org.statmake.additionalLocations", {})
+
+    font = fontTools.ttLib.TTFont(parsed_args.variable_font)
+    try:
+        statmake.lib.apply_stylespace_to_variable_font(
+            stylespace, font, additional_locations, mac_names=parsed_args.mac_names
+        )
+    except Error as e:
+        logging.error("Cannot apply Stylespace to font: %s", str(e))
+        sys.exit(1)
+
+    font.save(parsed_args.output_path or parsed_args.variable_font)
+</file>
+
+<file path="tests/test_cli.py">
+import fontTools.designspaceLib
+import fontTools.ttLib
+import pytest
+import ufo2ft
+
+import statmake.cli
+
+from . import testutil
+
+
+def test_cli_stylespace_in_designspace(datadir, tmp_path):
+    varfont = empty_varfont(datadir / "Test_Wght_Upright.designspace")
+    varfont.save(tmp_path / "varfont.ttf")
+    del varfont
+
+    statmake.cli.main(
+        [
+            "-m",
+            str(datadir / "TestInlineStylespace.designspace"),
+            str(tmp_path / "varfont.ttf"),
+        ]
+    )
+
+    font = fontTools.ttLib.TTFont(tmp_path / "varfont.ttf")
+    v = testutil.dump_axis_values(font, font["STAT"].table.AxisValueArray.AxisValue)
+    assert v == TEST_WGHT_UPRIGHT_STAT_DUMP
+
+    names = font["name"]
+    assert not any(True for record in names.names if record.platformID == 1)
+
+
+def test_cli_stylespace_in_designspace_mac_names(datadir, tmp_path):
+    varfont = empty_varfont(datadir / "Test_Wght_Upright.designspace")
+    varfont.save(tmp_path / "varfont.ttf")
+    del varfont
+
+    statmake.cli.main(
+        [
+            "-m",
+            str(datadir / "TestInlineStylespace.designspace"),
+            "--mac-names",
+            str(tmp_path / "varfont.ttf"),
+        ]
+    )
+
+    varfont = fontTools.ttLib.TTFont(tmp_path / "varfont.ttf")
+    names = varfont["name"]
+    assert any(True for record in names.names if record.platformID == 1)
+
+
+def test_cli_designspace_stylespace_external(datadir, tmp_path):
+    varfont = empty_varfont(datadir / "Test_Wght_Upright.designspace")
+    varfont.save(tmp_path / "varfont.ttf")
+
+    statmake.cli.main(
+        [
+            "-m",
+            str(datadir / "TestExternalStylespace.designspace"),
+            str(tmp_path / "varfont.ttf"),
+        ]
+    )
+
+    font = fontTools.ttLib.TTFont(tmp_path / "varfont.ttf")
+    v = testutil.dump_axis_values(font, font["STAT"].table.AxisValueArray.AxisValue)
+    assert v == TEST_WGHT_UPRIGHT_STAT_DUMP
+
+
+def test_cli_stylespace_external(datadir, tmp_path):
+    varfont = empty_varfont(datadir / "Test_Wght_Upright.designspace")
+    varfont.save(tmp_path / "varfont.ttf")
+
+    statmake.cli.main(
+        [
+            "-m",
+            str(datadir / "Test_Wght_Upright.designspace"),
+            "--stylespace",
+            str(datadir / "Test.stylespace"),
+            str(tmp_path / "varfont.ttf"),
+        ]
+    )
+
+    font = fontTools.ttLib.TTFont(tmp_path / "varfont.ttf")
+    v = testutil.dump_axis_values(font, font["STAT"].table.AxisValueArray.AxisValue)
+    assert v == TEST_WGHT_UPRIGHT_STAT_DUMP
+
+
+def test_cli_stylespace_in_broken_designspace(datadir, tmp_path):
+    with pytest.raises(SystemExit):
+        statmake.cli.main(
+            [
+                "-m",
+                str(datadir / "Test_Wght_Upright.designspace"),
+                str(tmp_path / "varfont.ttf"),
+            ]
+        )
+
+
+def empty_varfont(designspace_path):
+    designspace = fontTools.designspaceLib.DesignSpaceDocument.fromfile(
+        designspace_path
+    )
+    for source in designspace.sources:
+        source.font = testutil.empty_UFO(source.styleName)
+    ufo2ft.compileInterpolatableTTFsFromDS(designspace, inplace=True)
+    varfont, _, _ = fontTools.varLib.build(designspace)
+    return varfont
+
+
+TEST_WGHT_UPRIGHT_STAT_DUMP = [
+    {"Format": 1, "Name": {"en": "XLight"}, "Flags": 0, "AxisIndex": 0, "Value": 200.0},
+    {"Format": 1, "Name": {"en": "Light"}, "Flags": 0, "AxisIndex": 0, "Value": 300.0},
+    {
+        "Format": 3,
+        "Name": {"en": "Regular"},
+        "Flags": 2,
+        "AxisIndex": 0,
+        "Value": 400.0,
+        "LinkedValue": 700.0,
+    },
+    {
+        "Format": 1,
+        "Name": {"en": "Semi Bold"},
+        "Flags": 0,
+        "AxisIndex": 0,
+        "Value": 600.0,
+    },
+    {"Format": 1, "Name": {"en": "Bold"}, "Flags": 0, "AxisIndex": 0, "Value": 700.0},
+    {
+        "Format": 2,
+        "Name": {"en": "Black"},
+        "Flags": 0,
+        "AxisIndex": 0,
+        "NominalValue": 900.0,
+        "RangeMinValue": 701.0,
+        "RangeMaxValue": 900.0,
+    },
+    {
+        "Format": 3,
+        "Name": {"en": "Upright"},
+        "Flags": 2,
+        "AxisIndex": 1,
+        "Value": 0.0,
+        "LinkedValue": 1.0,
+    },
+]
+</file>
+
+<file path="tests/testutil.py">
+import io
+from pathlib import Path
+from typing import Mapping, Optional
+
+import fontTools.designspaceLib
+import fontTools.ttLib
+import fontTools.ttLib.tables._n_a_m_e
+import fontTools.varLib
+import ufo2ft
+import ufoLib2
+
+import statmake.classes
+import statmake.lib
+
+
+def dump_axes(font, axes_array):
+    dump_list = []
+    for axis in axes_array:
+        entry = {
+            "Name": dump_name_ids(font, axis.AxisNameID),
+            "AxisTag": axis.AxisTag,
+            "AxisOrdering": axis.AxisOrdering,
+        }
+        dump_list.append(entry)
+    return dump_list
+
+
+def dump_axis_values(font, axis_value_array):
+    dump_list = []
+    for axis in axis_value_array:
+        entry = {
+            "Format": axis.Format,
+            "Name": dump_name_ids(font, axis.ValueNameID),
+            "Flags": axis.Flags,
+        }
+        if axis.Format == 1:
+            entry["AxisIndex"] = axis.AxisIndex
+            entry["Value"] = axis.Value
+        elif axis.Format == 2:
+            entry["AxisIndex"] = axis.AxisIndex
+            entry["NominalValue"] = axis.NominalValue
+            entry["RangeMinValue"] = axis.RangeMinValue
+            entry["RangeMaxValue"] = axis.RangeMaxValue
+        elif axis.Format == 3:
+            entry["AxisIndex"] = axis.AxisIndex
+            entry["Value"] = axis.Value
+            entry["LinkedValue"] = axis.LinkedValue
+        elif axis.Format == 4:
+            entry["AxisValueRecord"] = [
+                (r.AxisIndex, r.Value) for r in axis.AxisValueRecord
+            ]
+        else:
+            raise ValueError("Unknown format")
+        dump_list.append(entry)
+    return dump_list
+
+
+def dump_name_ids(otfont: fontTools.ttLib.TTFont, name_id: int) -> Mapping[str, str]:
+    """Return a mapping of language codes to name strings."""
+    name_mapping = fontTools.ttLib.tables._n_a_m_e._WINDOWS_LANGUAGES
+    name_table = otfont["name"].names
+    matches = {
+        name_mapping[n.langID]: n.toUnicode()
+        for n in name_table
+        if n.platformID == 3 and n.nameID == name_id
+    }
+    return matches
+
+
+def empty_UFO(style_name: str) -> ufoLib2.Font:
+    # pylint: disable=assigning-non-slot
+    ufo = ufoLib2.Font()
+    ufo.info.familyName = "Test"
+    ufo.info.styleName = style_name
+    ufo.info.unitsPerEm = 1000
+    ufo.info.ascender = 800
+    ufo.info.descender = -200
+    ufo.info.xHeight = 500
+    ufo.info.capHeight = 700
+    ufo.info.postscriptUnderlineThickness = 50
+    ufo.info.postscriptUnderlinePosition = -75
+    g = ufo.newGlyph("a")
+    g.width = 500
+    return ufo
+
+
+def reload_font(font):
+    buf = io.BytesIO()
+    font.save(buf)
+    buf.seek(0)
+    return fontTools.ttLib.TTFont(buf)
+
+
+def generate_variable_font(
+    designspace_path: Path,
+    stylespace_path: Path,
+    additional_locations: Optional[Mapping[str, float]] = None,
+    mac_names: bool = False,
+) -> fontTools.ttLib.TTFont:
+    designspace = fontTools.designspaceLib.DesignSpaceDocument.fromfile(
+        designspace_path
+    )
+    for source in designspace.sources:
+        source.font = empty_UFO(source.styleName)
+    ufo2ft.compileInterpolatableTTFsFromDS(designspace, inplace=True)
+    varfont, _, _ = fontTools.varLib.build(designspace)
+
+    stylespace = statmake.classes.Stylespace.from_file(stylespace_path)
+    if additional_locations is None:
+        additional_locations = designspace.lib.get(
+            "org.statmake.additionalLocations", {}
+        )
+    statmake.lib.apply_stylespace_to_variable_font(
+        stylespace, varfont, additional_locations, mac_names=mac_names
+    )
+    return reload_font(varfont)
+</file>
+
+<file path="README.md">
+# statmake
+
+`statmake` takes a user-written Stylespace that defines [OpenType `STAT` information](https://docs.microsoft.com/en-us/typography/opentype/spec/stat) for an entire font family and then (potentially subsets and) applies it to a specific variable font. This spares users from having to deal with [raw TTX dumps](https://github.com/fonttools/fonttools/) and juggling with nameIDs.
+
+## Installation
+
+The easiest way is by installing it with `pip`. You need at least Python 3.8.
+
+```
+pip3 install statmake
+```
+
+## Usage
+
+
+### External Stylespace file, stand-alone or referenced from a Designspace file
+
+If you are producing more than one variable font (i.e. you have multiple Designspace files), you can avoid duplicated information by writing a single all-encompassing Stylespace file which statmake will subset for each variable font.
+
+**Attention:** A `STAT` table is supposed to describe a font's relationship to the _entire_ family. If you have separate upright and italic variable fonts with a `wght` axis each, you need to mark each font's position on the `ital` axis _in the Designspace lib `org.statmake.additionalLocations` key_. The Designspace `<axes>` elements are not supposed to hold this information, so it must be done in a separate lib key.
+
+1. Write a Stylespace file that describes each stop of all axes available in the entire family. See [tests/data/Test.stylespace](tests/data/Test.stylespace) for an annotated example. You can also use it as a starting point.
+2. You can have the file stand-alone or use the Designspace lib's `org.statmake.stylespacePath` key to store the path to the Stylespace file relative to the Designspace file. See [tests/data/TestExternalStylespace.designspace](tests/data/TestExternalStylespace.designspace) for an example.
+3. If you have one or more Designspace files which do not define all axes available to the family, you have to annotate them with the missing axis locations to get a complete `STAT` table. See the lib key at the bottom of [tests/data/Test_Wght_Upright.designspace](tests/data/Test_Wght_Upright.designspace) and [tests/data/Test_Wght_Italic.designspace](tests/data/Test_Wght_Italic.designspace) for an example.
+4. Generate the variable font(s) as normal
+5. If...
+    1. ... you store the Stylespace file stand-alone: run `statmake --designspace variable_font.designspace --stylespace your.stylespace variable_font.ttf`.
+    2. ... you store the Stylespace inline in the Designspace file or as a stand-alone file and added the relative path to it in the Designspace's `org.statmake.stylespacePath` key: run `statmake --designspace variable_font.designspace variable_font.ttf`
+
+Be sure to use the Designspace file that was used to generate the font to get the correct missing axis location definitions.
+
+### Designspace file with inline Stylespace data
+
+If you are producing a single variable font containing an entire family, this approach will save you an external file.
+
+1. Write the file as above, point 1.
+2. Insert it into the Designspace file's lib under the `org.statmake.stylespace` key. See [tests/data/TestInlineStylespace.designspace](tests/data/TestInlineStylespace.designspace) for an example.
+3. Proceed from point 3 above.
+
+## Q: Can I please have something other than a .plist file?
+
+Yes, but you have to convert it to `.plist` yourself, as statmake currently only read `.plist` files. One possible converter is Adam Twardoch's [yaplon](https://pypi.org/project/yaplon/).
+
+## Q: I'm getting errors about how statmake doesn't like the way I wrote the Stylespace, but I want the data to be that way?
+
+Use a custom script with the https://fonttools.readthedocs.io/en/latest/otlLib/builder.html#fontTools.otlLib.builder.buildStatTable API instead.
+
+## Development setup
+
+The project uses `uv`; install it from https://docs.astral.sh/uv/, and then:
+
+```bash
+# Install this project and its dependencies
+uv sync
+# Install tox globally for your user with uv support (if your other projects use it too)
+uv tool install tox --with tox-uv
+# Run tests on various Python versions
+tox
+```
+</file>
+
+<file path="src/statmake/lib.py">
+import collections
+from typing import Any, Dict, List, Mapping, Set, Tuple, Union
+
+import fontTools.otlLib.builder
+import fontTools.ttLib
+
+import statmake.classes
+from statmake.errors import Error
+
+
+def apply_stylespace_to_variable_font(
+    stylespace: statmake.classes.Stylespace,
+    varfont: fontTools.ttLib.TTFont,
+    additional_locations: Mapping[str, float],
+    mac_names: bool = False,
+) -> None:
+    """Generate and apply a STAT table to a variable font.
+
+    additional_locations: used in subset Designspaces to express where on which other
+    axes not defined by an <axis> element the varfont stands. The primary use-case is
+    defining a complete STAT table for variable fonts that do not include all axes of a
+    family (either because they intentionally contain just a subset of axes or because
+    the designs are incompatible).
+
+    mac_names: Whether to add a platformID=1 name record for every platformID=3 record.
+    Off by default, because these are deprecated.
+    """
+
+    axes, locations, elided_fallback_name = _generate_builder_data(
+        stylespace, varfont, additional_locations
+    )
+    fontTools.otlLib.builder.buildStatTable(
+        varfont, axes, locations, elided_fallback_name, macNames=mac_names
+    )
+
+
+def _generate_builder_data(
+    stylespace: statmake.classes.Stylespace,
+    varfont: fontTools.ttLib.TTFont,
+    additional_locations: Mapping[str, float],
+) -> Tuple[
+    List[Mapping[str, Any]], List[Mapping[str, Any]], Union[int, Dict[str, str]]
+]:
+    """Generate axes and locations dictionaries for use in
+    fontTools.otlLib.builder.buildStatTable, tailored to the font.
+
+    Rules:
+        1. There must be a fvar table so we know which named instances are defined.
+            Every named instance needs a STAT entry for every point of its axis
+            definition, i.e. an instance at {"Weight": 300, "Slant": 5} must have a
+            Stylespace entry for Weight=300 and for Slant=5.
+        2. The Stylespace must contain all axis names the varfont does and tags must
+            match.
+        3. Additional locations must only specify axes not in the font already and can
+            only draw from axes available in the Stylespace.
+        4. All name IDs must have a default English (United States) entry for the
+            Windows platform, Unicode BMP encoding, to match axis names to tags.
+        5. The font must get a location for every axis the Stylespace contains.
+    """
+
+    name_to_tag = {a.name.default: a.tag for a in stylespace.axes}
+    _sanity_check(stylespace, varfont, additional_locations, name_to_tag)
+
+    # First, determine which stops are used on which axes. The STAT table must contain
+    # a name for each stop that is used on each axis, so each stop must have an entry
+    # in the Stylespace. Also include locations in additional_locations that can refer
+    # to axes not present in the current varfont.
+    stylespace_stops: Dict[str, Set[float]] = {}
+    for axis in stylespace.axes:
+        stylespace_stops[axis.tag] = {location.value for location in axis.locations}
+    for named_location in stylespace.locations:
+        for name, value in named_location.axis_values.items():
+            stylespace_stops[name_to_tag[name]].add(value)
+
+    axis_stops: Mapping[str, Set[float]] = collections.defaultdict(set)  # tag to stops
+    for instance in varfont["fvar"].instances:
+        for k, v in instance.coordinates.items():
+            if v not in stylespace_stops[k]:
+                raise Error(
+                    f"There is no Stylespace entry for stop {v} on the '{k}' axis."
+                )
+            axis_stops[k].add(v)
+
+    for k, v in additional_locations.items():
+        axis_tag = name_to_tag[k]
+        if v not in stylespace_stops[axis_tag]:
+            raise Error(
+                f"There is no Stylespace entry for stop {v} on the '{k}' axis (from "
+                "additional locations)."
+            )
+        axis_stops[axis_tag].add(v)
+
+    # Generate formats 1, 2 and 3.
+    builder_axes: List[Mapping[str, Any]] = [
+        {
+            "tag": axis.tag,
+            "name": axis.name.mapping,
+            "ordering": axis.ordering,
+            "values": [
+                location.to_builder_dict()
+                for location in axis.locations
+                if location.value in axis_stops[axis.tag]
+            ],
+        }
+        for axis in stylespace.axes
+    ]
+
+    # Generate format 4.
+    builder_locations: List[Mapping[str, Any]] = [
+        named_location.to_builder_dict(name_to_tag)
+        for named_location in stylespace.locations
+        if all(
+            name_to_tag[k] in axis_stops and v in axis_stops[name_to_tag[k]]
+            for k, v in named_location.axis_values.items()
+        )
+    ]
+
+    elided_fallback: Union[int, Mapping[str, str]]
+    if isinstance(stylespace.elided_fallback_name_id, int):
+        # Use a raw name ID directly.
+        elided_fallback = stylespace.elided_fallback_name_id
+    else:
+        # Otherwise, unwrap into the format that the builder expects.
+        elided_fallback = dict(stylespace.elided_fallback_name_id.mapping)
+
+    return builder_axes, builder_locations, elided_fallback
+
+
+def _sanity_check(
+    stylespace: statmake.classes.Stylespace,
+    varfont: fontTools.ttLib.TTFont,
+    additional_locations: Mapping[str, float],
+    stylespace_name_to_tag: Mapping[str, str],
+) -> None:
+    """Ensures the input data contains no obvious faults."""
+
+    if "fvar" not in varfont:
+        raise Error(
+            "Need a variable font with the fvar table to determine which instances "
+            "are present."
+        )
+
+    # Sanity check: only allow axis names in additional_locations that are present in
+    # the Stylespace.
+    stylespace_names_set = set(stylespace_name_to_tag.keys())
+    additional_names_set = set(additional_locations.keys())
+    if not additional_names_set.issubset(stylespace_names_set):
+        surplus_keys = ", ".join(additional_names_set - stylespace_names_set)
+        raise Error(
+            "Additional locations must only contain axis names that are present in "
+            f"the Stylespace, the following aren't: {surplus_keys}."
+        )
+
+    # Sanity check: Ensure all font axes are present in the Stylespace and tags match.
+    font_name_to_tag = {
+        _default_name_string(varfont, axis.axisNameID): axis.axisTag
+        for axis in varfont["fvar"].axes
+    }
+    for name, tag in font_name_to_tag.items():
+        if name not in stylespace_name_to_tag:
+            raise Error(
+                f"Font contains axis named '{name}' which is not in Stylespace. The "
+                "Stylespace must contain all axes any font from the same family "
+                "contains."
+            )
+        if stylespace_name_to_tag[name] != tag:
+            raise Error(
+                f"Font axis named '{name}' has tag '{tag}' but Stylespace defines it "
+                f"to be '{stylespace_name_to_tag[name]}'. Axis names and tags must "
+                "match between the font and the Stylespace."
+            )
+
+    # Sanity check: Only allow axis names in additional_locations that aren't in the
+    # font already.
+    for axis_name in additional_locations:
+        if axis_name in font_name_to_tag:
+            raise Error(
+                f"Rejecting the additional location for the axis named '{axis_name}' "
+                "because it is already present in the font."
+            )
+
+    # Sanity check: Ensure the location of the font is fully specified. This means
+    # the font axis names plus additional_locations axis names must equal Stylespace
+    # axis names.
+    font_names_set = set(font_name_to_tag.keys()).union(additional_names_set)
+    if font_names_set != stylespace_names_set:
+        missing_axis_names = ", ".join(stylespace_names_set - font_names_set)
+        raise Error(
+            "The location of the font is not fully specified, missing locations "
+            f"for the following axes: {missing_axis_names}."
+        )
+
+    # Sanity check: only allow raw fallback name IDs that are in this font.
+    if isinstance(stylespace.elided_fallback_name_id, int):
+        _default_name_string(varfont, stylespace.elided_fallback_name_id)
+
+
+def _default_name_string(otfont: fontTools.ttLib.TTFont, name_id: int) -> str:
+    """Return English name for name_id."""
+    name = otfont["name"].getName(name_id, 3, 1, 0x409)
+    if name is None:
+        raise Error(f"No English record for id {name_id} for Windows platform.")
+    return name.toStr()
+</file>
+
+<file path="tox.ini">
+[tox]
+isolated_build = true
+envlist = lint, clean-cov, py3{8,9,10,11,12,13}-cov, pypy3{8,9,10}-cov, report-cov
+
+[testenv]
+runner = uv-venv-lock-runner
+with_dev = true
+package = wheel
+wheel_build_env = .pkg
+depends =
+    # See https://pytest-cov.readthedocs.io/en/latest/tox.html.
+    py3{8,9,10,11,12,13}-cov,pypy3{8,9,10}-cov: clean
+    report: py3{8,9,10,11,12,13}-cov,pypy3{8,9,10}-cov
+commands =
+    pytest --cov --cov-append --cov-report=term-missing {posargs}
+
+[testenv:clean-cov]
+runner = uv-venv-lock-runner
+with_dev = true
+skip_install = true
+commands = coverage erase
+
+[testenv:report-cov]
+runner = uv-venv-lock-runner
+with_dev = true
+skip_install = true
+commands =
+    coverage report
+    coverage html
+
+[testenv:format]
+runner = uv-venv-lock-runner
+with_dev = true
+commands =
+    ruff check --select I --fix
+    ruff format
+
+[testenv:lint]
+runner = uv-venv-lock-runner
+with_dev = true
+skip_install = true
+commands =
+    ruff check
+    mypy src tests
+
+[testenv:upgrade-requirements]
+skip_install = true
+commands =
+    uv lock --upgrade
+</file>
+
+<file path=".github/workflows/ci.yml">
+name: Continuous Integration
+
+on:
+  push:
+    branches: [master]
+    tags: ["v*.*.*"]
+  pull_request:
+    branches: [master]
+
+jobs:
+  test:
+    runs-on: ${{ matrix.platform }}
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.13"]
+        platform: [ubuntu-latest, windows-latest]
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install the latest version of uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          version: "latest"
+      - name: Lint and test
+        run: uvx --with tox-uv tox -e lint,py
+
+  # https://packaging.python.org/en/latest/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/
+  deploy:
+    # only run if the commit is tagged...
+    if: startsWith(github.ref, 'refs/tags/v')
+    # ... and the previous jobs completed successfully
+    needs:
+      - test
+    runs-on: ubuntu-latest
+    environment:
+      name: publish-to-pypi
+      url: https://pypi.org/p/statmake
+    permissions:
+      id-token: write # IMPORTANT: mandatory for trusted publishing
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Install the latest version of uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          version: "latest"
+      - name: Build and publish
+        run: |
+          uv build
+          uv publish
+</file>
+
+<file path="tests/test_make_stat.py">
+import fontTools.designspaceLib
+import pytest
+
+import statmake.classes
+from statmake.errors import Error, StylespaceError
+
+from . import testutil
+
+
+def test_load_stylespace_broken_range(datadir):
+    with pytest.raises(ValueError, match=r"Not enough values .*"):
+        statmake.classes.Stylespace.from_file(datadir / "TestBroken.stylespace")
+
+
+def test_load_stylespace_broken_ordering(datadir):
+    with pytest.raises(StylespaceError, match=r".* ordering .*"):
+        statmake.classes.Stylespace.from_file(datadir / "TestBrokenAxes.stylespace")
+
+
+def test_load_stylespace_broken_format4_1(datadir):
+    with pytest.raises(
+        StylespaceError, match=r".* must specify values for all axes .*"
+    ):
+        statmake.classes.Stylespace.from_file(datadir / "TestBogusFormat4.stylespace")
+
+
+def test_load_stylespace_broken_format4_2(datadir):
+    with pytest.raises(
+        StylespaceError, match=r".* must specify values for all axes .*"
+    ):
+        statmake.classes.Stylespace.from_file(datadir / "TestBogusFormat4_2.stylespace")
+
+
+def test_load_stylespace_missing_linked_value(datadir):
+    with pytest.raises(
+        StylespaceError,
+        match=r".* location 'Regular' specifies a linked_value of '100.0'.*",
+    ):
+        statmake.classes.Stylespace.from_file(
+            datadir / "TestMissingLinkedValue.stylespace"
+        )
+
+
+def test_load_stylespace_duplicate_value(datadir):
+    with pytest.raises(
+        StylespaceError,
+        match=r".* 'Regular' specifies a duplicate location value of '400.0'.*",
+    ):
+        statmake.classes.Stylespace.from_file(datadir / "TestDuplicateValue.stylespace")
+
+
+def test_load_stylespace_duplicate_value_format4(datadir):
+    with pytest.raises(
+        StylespaceError, match=r".* location 'fgfg' specifies a duplicate location .*"
+    ):
+        statmake.classes.Stylespace.from_file(
+            datadir / "TestDuplicateValueFormat4.stylespace"
+        )
+
+
+def test_load_stylespace_broken_multilingual_no_en(datadir):
+    with pytest.raises(StylespaceError, match=r".* must have a default English .*"):
+        statmake.classes.Stylespace.from_file(
+            datadir / "TestMultilingualNoEn.stylespace"
+        )
+
+
+def test_load_stylespace_broken_multilingual_incomplete_lang(datadir):
+    with pytest.raises(
+        StylespaceError, match=r".* languages \['en'\] but expected was \['de', 'en'\]."
+    ):
+        statmake.classes.Stylespace.from_file(
+            datadir / "TestMultilingualBrokenAxisNameLang.stylespace"
+        )
+
+
+def test_load_stylespace_broken_multilingual_incomplete_lang2(datadir):
+    with pytest.raises(
+        StylespaceError, match=r".* languages \['en'\] but expected was \['de', 'en'\]."
+    ):
+        statmake.classes.Stylespace.from_file(
+            datadir / "TestMultilingualBrokenLocNameLang.stylespace"
+        )
+
+
+def test_load_stylespace_no_format4(datadir):
+    statmake.classes.Stylespace.from_file(datadir / "TestNoFormat4.stylespace")
+
+
+def test_load_from_designspace(datadir):
+    designspace = fontTools.designspaceLib.DesignSpaceDocument.fromfile(
+        datadir / "TestInlineStylespace.designspace"
+    )
+    statmake.classes.Stylespace.from_designspace(designspace)
+
+
+def test_load_from_broken_designspace(datadir):
+    designspace = fontTools.designspaceLib.DesignSpaceDocument.fromfile(
+        datadir / "TestNoFormat4.stylespace"
+    )
+    with pytest.raises(StylespaceError, match=r".* lib .*"):
+        statmake.classes.Stylespace.from_designspace(designspace)
+
+
+def test_generation_incomplete_stylespace(datadir):
+    with pytest.raises(Error, match=r".* no Stylespace entry .*"):
+        _ = testutil.generate_variable_font(
+            datadir / "Test_Wght_Italic.designspace",
+            datadir / "TestIncomplete.stylespace",
+        )
+
+
+def test_generation_incomplete_additional_location(datadir):
+    with pytest.raises(
+        Error, match=r".* no Stylespace entry .* additional locations.*"
+    ):
+        _ = testutil.generate_variable_font(
+            datadir / "Test_Wght_Italic.designspace",
+            datadir / "Test.stylespace",
+            {"Italic": 2},
+        )
+
+
+def test_generation_disjunct_additional_location(datadir):
+    with pytest.raises(Error, match=r".* the following aren't: Foo."):
+        _ = testutil.generate_variable_font(
+            datadir / "Test_Wght_Italic.designspace",
+            datadir / "Test.stylespace",
+            {"Foo": 2},
+        )
+
+
+def test_generation_superfluous_additional_location(datadir):
+    with pytest.raises(
+        Error, match=r"Rejecting the additional location for the axis named 'Italic'.*"
+    ):
+        _ = testutil.generate_variable_font(
+            datadir / "Test_WghtItal.designspace",
+            datadir / "Test.stylespace",
+            {"Italic": 1},
+        )
+
+
+def test_generation_unknown_font_axis(datadir):
+    with pytest.raises(
+        Error, match=r"Font contains axis named 'Italic' which is not in Stylespace.*"
+    ):
+        _ = testutil.generate_variable_font(
+            datadir / "Test_WghtItal.designspace",
+            datadir / "TestJustWght.stylespace",
+            {},
+        )
+
+
+def test_generation_wrong_tag(datadir):
+    with pytest.raises(
+        Error,
+        match=r"Font axis named 'Italic' has tag 'ital' but Stylespace .* 'slnt'.",
+    ):
+        _ = testutil.generate_variable_font(
+            datadir / "Test_WghtItal.designspace",
+            datadir / "TestItalIsSlnt.stylespace",
+            {},
+        )
+
+
+def test_generation_incomplete_location(datadir):
+    with pytest.raises(
+        Error, match=r"missing locations for the following axes: Italic."
+    ):
+        _ = testutil.generate_variable_font(
+            datadir / "Test_Wght_Italic.designspace", datadir / "Test.stylespace", {}
+        )
+
+
+def test_generation_full(datadir):
+    varfont = testutil.generate_variable_font(
+        datadir / "Test_WghtItal.designspace", datadir / "Test.stylespace"
+    )
+
+    stat_table = varfont["STAT"]
+    assert stat_table.table.Version == 0x00010002
+
+    stat_axes = testutil.dump_axes(varfont, stat_table.table.DesignAxisRecord.Axis)
+    stat_axes_expected = [
+        {"Name": {"en": "Weight"}, "AxisTag": "wght", "AxisOrdering": 0},
+        {"Name": {"en": "Italic"}, "AxisTag": "ital", "AxisOrdering": 1},
+    ]
+    assert stat_axes == stat_axes_expected
+
+    stat_axis_values = testutil.dump_axis_values(
+        varfont, stat_table.table.AxisValueArray.AxisValue
+    )
+    stat_axis_values_expected = [
+        {
+            "AxisIndex": 0,
+            "Flags": 0,
+            "Format": 1,
+            "Name": {"en": "XLight"},
+            "Value": 200.0,
+        },
+        {
+            "AxisIndex": 0,
+            "Flags": 0,
+            "Format": 1,
+            "Name": {"en": "Light"},
+            "Value": 300.0,
+        },
+        {
+            "AxisIndex": 0,
+            "Flags": 2,
+            "Format": 3,
+            "LinkedValue": 700.0,
+            "Name": {"en": "Regular"},
+            "Value": 400.0,
+        },
+        {
+            "AxisIndex": 0,
+            "Flags": 0,
+            "Format": 1,
+            "Name": {"en": "Semi Bold"},
+            "Value": 600.0,
+        },
+        {
+            "AxisIndex": 0,
+            "Flags": 0,
+            "Format": 1,
+            "Name": {"en": "Bold"},
+            "Value": 700.0,
+        },
+        {
+            "AxisIndex": 0,
+            "Flags": 0,
+            "Format": 2,
+            "Name": {"en": "Black"},
+            "NominalValue": 900.0,
+            "RangeMaxValue": 900.0,
+            "RangeMinValue": 701.0,
+        },
+        {
+            "AxisIndex": 1,
+            "Flags": 2,
+            "Format": 3,
+            "LinkedValue": 1.0,
+            "Name": {"en": "Upright"},
+            "Value": 0.0,
+        },
+        {
+            "AxisIndex": 1,
+            "Flags": 0,
+            "Format": 1,
+            "Name": {"en": "Italic"},
+            "Value": 1.0,
+        },
+        {
+            "AxisValueRecord": [(0, 333.0), (1, 1.0)],
+            "Flags": 0,
+            "Format": 4,
+            "Name": {"en": "ASDF"},
+        },
+        {
+            "AxisValueRecord": [(0, 650.0), (1, 0.5)],
+            "Flags": 2,
+            "Format": 4,
+            "Name": {"en": "fgfg"},
+        },
+    ]
+    assert sorted(stat_axis_values, key=lambda x: x["Name"]["en"]) == sorted(
+        stat_axis_values_expected, key=lambda x: x["Name"]["en"]
+    )
+
+    assert stat_table.table.ElidedFallbackNameID == 2
+
+    names = varfont["name"]
+    assert not any(True for record in names.names if record.platformID == 1)
+
+
+def test_generation_full_mac_names(datadir):
+    varfont = testutil.generate_variable_font(
+        datadir / "Test_WghtItal.designspace",
+        datadir / "Test.stylespace",
+        mac_names=True,
+    )
+
+    names = varfont["name"]
+    assert any(True for record in names.names if record.platformID == 1)
+
+
+def test_generation_upright(datadir):
+    varfont = testutil.generate_variable_font(
+        datadir / "Test_Wght_Upright.designspace", datadir / "Test.stylespace"
+    )
+
+    stat_table = varfont["STAT"]
+    assert stat_table.table.Version == 0x00010001
+
+    stat_axes = testutil.dump_axes(varfont, stat_table.table.DesignAxisRecord.Axis)
+    stat_axes_expected = [
+        {"Name": {"en": "Weight"}, "AxisTag": "wght", "AxisOrdering": 0},
+        {"Name": {"en": "Italic"}, "AxisTag": "ital", "AxisOrdering": 1},
+    ]
+    assert stat_axes == stat_axes_expected
+
+    stat_axis_values = testutil.dump_axis_values(
+        varfont, stat_table.table.AxisValueArray.AxisValue
+    )
+    stat_axis_values_expected = [
+        {
+            "AxisIndex": 0,
+            "Flags": 0,
+            "Format": 1,
+            "Name": {"en": "XLight"},
+            "Value": 200.0,
+        },
+        {
+            "AxisIndex": 0,
+            "Flags": 0,
+            "Format": 1,
+            "Name": {"en": "Light"},
+            "Value": 300.0,
+        },
+        {
+            "AxisIndex": 0,
+            "Flags": 2,
+            "Format": 3,
+            "LinkedValue": 700.0,
+            "Name": {"en": "Regular"},
+            "Value": 400.0,
+        },
+        {
+            "AxisIndex": 0,
+            "Flags": 0,
+            "Format": 1,
+            "Name": {"en": "Semi Bold"},
+            "Value": 600.0,
+        },
+        {
+            "AxisIndex": 0,
+            "Flags": 0,
+            "Format": 1,
+            "Name": {"en": "Bold"},
+            "Value": 700.0,
+        },
+        {
+            "AxisIndex": 0,
+            "Flags": 0,
+            "Format": 2,
+            "Name": {"en": "Black"},
+            "NominalValue": 900.0,
+            "RangeMaxValue": 900.0,
+            "RangeMinValue": 701.0,
+        },
+        {
+            "AxisIndex": 1,
+            "Flags": 2,
+            "Format": 3,
+            "LinkedValue": 1.0,
+            "Name": {"en": "Upright"},
+            "Value": 0.0,
+        },
+    ]
+    assert stat_axis_values == stat_axis_values_expected
+
+    assert stat_table.table.ElidedFallbackNameID == 2
+
+
+def test_generation_italic(datadir):
+    varfont = testutil.generate_variable_font(
+        datadir / "Test_Wght_Italic.designspace", datadir / "Test.stylespace"
+    )
+
+    stat_table = varfont["STAT"]
+    assert stat_table.table.Version == 0x00010002
+
+    stat_axes = testutil.dump_axes(varfont, stat_table.table.DesignAxisRecord.Axis)
+    stat_axes_expected = [
+        {"Name": {"en": "Weight"}, "AxisTag": "wght", "AxisOrdering": 0},
+        {"Name": {"en": "Italic"}, "AxisTag": "ital", "AxisOrdering": 1},
+    ]
+    assert stat_axes == stat_axes_expected
+
+    stat_axis_values = testutil.dump_axis_values(
+        varfont, stat_table.table.AxisValueArray.AxisValue
+    )
+    stat_axis_values_expected = [
+        {
+            "AxisIndex": 0,
+            "Flags": 0,
+            "Format": 1,
+            "Name": {"en": "XLight"},
+            "Value": 200.0,
+        },
+        {
+            "AxisIndex": 0,
+            "Flags": 0,
+            "Format": 1,
+            "Name": {"en": "Light"},
+            "Value": 300.0,
+        },
+        {
+            "AxisIndex": 0,
+            "Flags": 2,
+            "Format": 3,
+            "LinkedValue": 700.0,
+            "Name": {"en": "Regular"},
+            "Value": 400.0,
+        },
+        {
+            "AxisIndex": 0,
+            "Flags": 0,
+            "Format": 1,
+            "Name": {"en": "Semi Bold"},
+            "Value": 600.0,
+        },
+        {
+            "AxisIndex": 0,
+            "Flags": 0,
+            "Format": 1,
+            "Name": {"en": "Bold"},
+            "Value": 700.0,
+        },
+        {
+            "AxisIndex": 0,
+            "Flags": 0,
+            "Format": 2,
+            "Name": {"en": "Black"},
+            "NominalValue": 900.0,
+            "RangeMaxValue": 900.0,
+            "RangeMinValue": 701.0,
+        },
+        {
+            "AxisIndex": 1,
+            "Flags": 0,
+            "Format": 1,
+            "Name": {"en": "Italic"},
+            "Value": 1.0,
+        },
+        {
+            "AxisValueRecord": [(0, 333.0), (1, 1.0)],
+            "Flags": 0,
+            "Format": 4,
+            "Name": {"en": "ASDF"},
+        },
+    ]
+    assert sorted(stat_axis_values, key=lambda x: x["Name"]["en"]) == sorted(
+        stat_axis_values_expected, key=lambda x: x["Name"]["en"]
+    )
+
+    assert stat_table.table.ElidedFallbackNameID == 2
+
+
+def test_generation_full_multilingual(datadir):
+    varfont = testutil.generate_variable_font(
+        datadir / "Test_WghtItal.designspace", datadir / "TestMultilingual.stylespace"
+    )
+
+    stat_table = varfont["STAT"]
+    assert stat_table.table.Version == 0x00010002
+
+    stat_axes = testutil.dump_axes(varfont, stat_table.table.DesignAxisRecord.Axis)
+    stat_axes_expected = [
+        {
+            "Name": {"de": "Gäwicht", "en": "Weight", "fr": "Géwicht"},
+            "AxisTag": "wght",
+            "AxisOrdering": 0,
+        },
+        {
+            "Name": {"de": "Italienisch", "en": "Italic", "fr": "Itâlic"},
+            "AxisTag": "ital",
+            "AxisOrdering": 1,
+        },
+    ]
+    assert stat_axes == stat_axes_expected
+
+    stat_axis_values = testutil.dump_axis_values(
+        varfont, stat_table.table.AxisValueArray.AxisValue
+    )
+    stat_axis_values_expected = [
+        {
+            "Format": 1,
+            "Name": {"de": "Dünn", "en": "Thin", "fr": "Dûnn"},
+            "Flags": 0,
+            "AxisIndex": 0,
+            "Value": 200.0,
+        },
+        {
+            "Format": 1,
+            "Name": {"de": "Leicht", "en": "Light", "fr": "vfdgf"},
+            "Flags": 0,
+            "AxisIndex": 0,
+            "Value": 300.0,
+        },
+        {
+            "Format": 3,
+            "Name": {"de": "Regulär", "en": "Regular", "fr": "aaa"},
+            "Flags": 2,
+            "AxisIndex": 0,
+            "Value": 400.0,
+            "LinkedValue": 700.0,
+        },
+        {
+            "Format": 1,
+            "Name": {"de": "BB", "en": "AA", "fr": "CC"},
+            "Flags": 0,
+            "AxisIndex": 0,
+            "Value": 600.0,
+        },
+        {
+            "Format": 1,
+            "Name": {"de": "Böld", "en": "Bold", "fr": "Bôld"},
+            "Flags": 0,
+            "AxisIndex": 0,
+            "Value": 700.0,
+        },
+        {
+            "Format": 1,
+            "Name": {"de": "asdf", "en": "asdf", "fr": "asdf"},
+            "Flags": 0,
+            "AxisIndex": 0,
+            "Value": 900.0,
+        },
+        {
+            "Format": 3,
+            "Name": {"de": "Aufrecht", "en": "Upright", "fr": "Ûpright"},
+            "Flags": 2,
+            "AxisIndex": 1,
+            "Value": 0.0,
+            "LinkedValue": 1.0,
+        },
+        {
+            "Format": 1,
+            "Name": {"de": "Italienisch", "en": "Italic", "fr": "Itâlic"},
+            "Flags": 0,
+            "AxisIndex": 1,
+            "Value": 1.0,
+        },
+        {
+            "Format": 4,
+            "Name": {"de": "ASDF", "en": "ASDF", "fr": "ASDF"},
+            "Flags": 0,
+            "AxisValueRecord": [(0, 333.0), (1, 1.0)],
+        },
+        {
+            "Format": 4,
+            "Name": {"de": "FGFG", "en": "FGFG", "fr": "FGFG"},
+            "Flags": 2,
+            "AxisValueRecord": [(0, 650.0), (1, 0.5)],
+        },
+    ]
+    assert sorted(stat_axis_values, key=lambda x: x["Name"]["en"]) == sorted(
+        stat_axis_values_expected, key=lambda x: x["Name"]["en"]
+    )
+
+    assert stat_table.table.ElidedFallbackNameID == 2
+</file>
+
+<file path="src/statmake/classes.py">
+import enum
+import functools
+import os
+from pathlib import Path
+from typing import Any, Dict, List, Mapping, Optional, Set, Tuple, Union
+
+import attrs
+import cattrs
+import fontTools.designspaceLib
+import fontTools.misc.plistlib
+
+from .errors import StylespaceError
+
+DESIGNSPACE_STYLESPACE_INLINE_KEY = "org.statmake.stylespace"
+DESIGNSPACE_STYLESPACE_PATH_KEY = "org.statmake.stylespacePath"
+
+
+class AxisValueFlag(enum.Flag):
+    OlderSiblingFontAttribute = 0x0001
+    ElidableAxisValueName = 0x0002
+
+
+@attrs.frozen
+class FlagList:
+    """Represent a list of AxisValueFlags so I can implement a value
+    property."""
+
+    flags: List[AxisValueFlag] = attrs.field(factory=list)
+
+    @property
+    def value(self) -> int:
+        """Return the value of all flags ORed together."""
+        if not self.flags:
+            return 0
+        return functools.reduce(lambda x, y: x | y, self.flags).value
+
+
+@attrs.frozen
+class NameRecord:
+    """Represent a IETF BCP 47 language code to name string mapping for the
+    `name` table."""
+
+    mapping: Mapping[str, str]
+
+    def __attrs_post_init__(self) -> None:
+        if "en" not in self.mapping:
+            raise StylespaceError(
+                "All NameRecords must have a default English (IETF BCP 47 language "
+                "code 'en') entry."
+            )
+
+    def __getitem__(self, key: str) -> str:
+        return self.mapping.__getitem__(key)
+
+    @property
+    def default(self) -> str:
+        return self.mapping["en"]
+
+    @classmethod
+    def from_string(cls, name: str) -> "NameRecord":
+        return cls(mapping={"en": name})
+
+    @classmethod
+    def from_dict(cls, dictionary: Mapping) -> "NameRecord":
+        return cls(mapping=dictionary)
+
+    @classmethod
+    def structure(cls, data: Union[str, dict]) -> "NameRecord":
+        if isinstance(data, str):
+            return cls.from_string(data)
+        if isinstance(data, dict):
+            return cls.from_dict(data)
+        raise StylespaceError(f"Don't know how to construct NameRecord from '{data}'.")
+
+
+@attrs.frozen
+class LocationFormat1:
+    name: NameRecord
+    value: float
+    flags: FlagList = attrs.field(factory=FlagList)
+
+    def to_builder_dict(self) -> Dict[str, Any]:
+        return {
+            "name": self.name.mapping,
+            "value": self.value,
+            "flags": self.flags.value,
+        }
+
+
+@attrs.frozen
+class LocationFormat2:
+    name: NameRecord
+    value: float
+    range: Tuple[float, float]
+    flags: FlagList = attrs.field(factory=FlagList)
+
+    def to_builder_dict(self) -> Dict[str, Any]:
+        return {
+            "name": self.name.mapping,
+            "nominalValue": self.value,
+            "rangeMinValue": self.range[0],
+            "rangeMaxValue": self.range[1],
+            "flags": self.flags.value,
+        }
+
+
+@attrs.frozen
+class LocationFormat3:
+    name: NameRecord
+    value: float
+    linked_value: float
+    flags: FlagList = attrs.field(factory=FlagList)
+
+    def to_builder_dict(self) -> Dict[str, Any]:
+        return {
+            "name": self.name.mapping,
+            "value": self.value,
+            "linkedValue": self.linked_value,
+            "flags": self.flags.value,
+        }
+
+
+@attrs.frozen
+class LocationFormat4:
+    name: NameRecord
+    axis_values: Mapping[str, float]
+    flags: FlagList = attrs.field(factory=FlagList)
+
+    def to_builder_dict(self, name_to_tag: Mapping[str, str]) -> Dict[str, Any]:
+        return {
+            "name": self.name.mapping,
+            "location": {name_to_tag[k]: v for k, v in self.axis_values.items()},
+            "flags": self.flags.value,
+        }
+
+
+@attrs.frozen
+class Axis:
+    name: NameRecord
+    tag: str
+    locations: List[Union[LocationFormat1, LocationFormat2, LocationFormat3]] = (
+        attrs.field(factory=list)
+    )
+    ordering: Optional[int] = None
+
+
+ElidedFallback = Union[NameRecord, int]
+
+
+@attrs.frozen
+class Stylespace:
+    axes: List[Axis]
+    locations: List[LocationFormat4] = attrs.field(factory=list)
+    elided_fallback_name_id: ElidedFallback = 2
+
+    def __attrs_post_init__(self) -> None:
+        """Fill in a default ordering unless the user specified at least one
+        custom one, also do sanity checking.
+
+        This works around the frozen state with `object.__setattr__`.
+        """
+        if all(axis.ordering is None for axis in self.axes):
+            for index, axis in enumerate(self.axes):
+                object.__setattr__(axis, "ordering", index)
+        elif not all(
+            isinstance(axis.ordering, int) and axis.ordering >= 0 for axis in self.axes
+        ):
+            raise StylespaceError(
+                "If you specify the ordering for one axis, you must specify all of "
+                "them and they must be >= 0."
+            )
+
+        # Ensure named locations only contain axis names that are present in the
+        # Stylespace and specify a location for all axes.
+        available_axes = {a.name.default for a in self.axes}
+        for named_location in self.locations:
+            named_location_axes = set(named_location.axis_values.keys())
+            if named_location_axes != available_axes:
+                raise StylespaceError(
+                    f"Location named '{named_location.name.default}' must specify "
+                    "values for all axes in the Stylespace and contain no other axis "
+                    "names."
+                )
+
+        # Ensure that all name records have the same languages specified.
+        reference_languages = None
+        for axis in self.axes:
+            if reference_languages is None:
+                reference_languages = sorted(axis.name.mapping.keys())
+            for location in axis.locations:
+                location_languages = sorted(location.name.mapping.keys())
+                if location_languages != reference_languages:
+                    raise StylespaceError(
+                        "All names must be supplied in the same languages. On axis "
+                        f"'{axis.name.default}', location '{location.name.default}' is "
+                        f"named in languages {location_languages} but "
+                        f"expected was {reference_languages}."
+                    )
+        for named_location in self.locations:
+            assert reference_languages is not None
+            location_languages = sorted(named_location.name.mapping.keys())
+            if location_languages != reference_languages:
+                raise StylespaceError(
+                    "All names must be supplied in the same languages. The named "
+                    f"location '{named_location.name.default}' is "
+                    f"named in languages {location_languages} but "
+                    f"expected was {reference_languages}."
+                )
+
+        # Ensure linked_values are present on the same axis in the Stylespace
+        for axis in self.axes:
+            values = {location.value for location in axis.locations}
+            for location in axis.locations:
+                linked_value: Optional[float] = getattr(location, "linked_value", None)
+                if linked_value is not None and linked_value not in values:
+                    raise StylespaceError(
+                        f"On axis '{axis.name.default}', location "
+                        f"'{location.name.default}' specifies a linked_value of "
+                        f"'{linked_value}', which does not exist on that axis "
+                        "(ranges are ignored)."
+                    )
+
+        # Ensure location values are unique.
+        for axis in self.axes:
+            values = set()
+            for location in axis.locations:
+                if location.value in values:
+                    raise StylespaceError(
+                        f"On axis '{axis.name.default}', location "
+                        f"'{location.name.default}' specifies a duplicate location "
+                        f"value of '{location.value}', which is already assigned on "
+                        "the same axis."
+                    )
+                values.add(location.value)
+        named_values: Set[Tuple[Tuple[str, float], ...]] = set()
+        for named_location in self.locations:
+            named_location_tuple = tuple(named_location.axis_values.items())
+            if named_location_tuple in named_values:
+                raise StylespaceError(
+                    f"The named location '{named_location.name.default}' specifies a "
+                    "duplicate location already taken by another."
+                )
+            named_values.add(named_location_tuple)
+
+    @classmethod
+    def from_dict(
+        cls, dict_data: dict, detailed_validation: bool = False
+    ) -> "Stylespace":
+        """Construct Stylespace from unstructured dict data."""
+        converter = cattrs.Converter(detailed_validation=detailed_validation)
+        converter.register_structure_hook(
+            FlagList,
+            lambda list_of_str_flags, cls: cls(  # type: ignore
+                [getattr(AxisValueFlag, f) for f in list_of_str_flags]
+            ),
+        )
+        converter.register_structure_hook(
+            NameRecord,
+            lambda data, cls: cls.structure(data),  # type: ignore
+        )
+        converter.register_structure_hook(
+            ElidedFallback,
+            lambda data, _cls: data
+            if isinstance(data, int)
+            else NameRecord.structure(data),  # type: ignore
+        )
+        return converter.structure(dict_data, cls)
+
+    def to_dict(self) -> Dict[str, Any]:
+        """Construct dict from structured Stylespace data."""
+        converter = cattrs.Converter()
+        converter.register_unstructure_hook(  # type: ignore
+            FlagList,
+            lambda cls: [flag.name for flag in cls.flags],  # type: ignore
+        )
+        converter.register_unstructure_hook(NameRecord, lambda cls: cls.mapping)  # type: ignore
+        return converter.unstructure(self)
+
+    @classmethod
+    def from_bytes(
+        cls, stylespace_content: bytes, detailed_validation: bool = False
+    ) -> "Stylespace":
+        """Construct Stylespace from bytes containing (XML) plist data."""
+        stylespace_content_parsed = fontTools.misc.plistlib.loads(stylespace_content)
+        return cls.from_dict(stylespace_content_parsed, detailed_validation)
+
+    @classmethod
+    def from_file(
+        cls,
+        stylespace_path: Union[str, bytes, os.PathLike],
+        detailed_validation: bool = False,
+    ) -> "Stylespace":
+        """Construct Stylespace from path to (XML) plist file."""
+        with open(stylespace_path, "rb") as fp:
+            return cls.from_bytes(fp.read(), detailed_validation)
+
+    @classmethod
+    def from_designspace(
+        cls, designspace: fontTools.designspaceLib.DesignSpaceDocument
+    ) -> "Stylespace":
+        f"""Construct Stylespace from unstructured dict data or a path stored in a
+        Designspace object's lib.
+
+        The keys:
+
+        - `{DESIGNSPACE_STYLESPACE_INLINE_KEY}`: The content of a regular Stylespace
+          file as a dict.
+        - `{DESIGNSPACE_STYLESPACE_PATH_KEY}`: A path to an external Stylespace file,
+          relative to the Designspace file (the Designspace object must have the `path`
+          attribute set).
+        """
+        stylespace_inline = designspace.lib.get(DESIGNSPACE_STYLESPACE_INLINE_KEY)
+        stylespace_path = designspace.lib.get(DESIGNSPACE_STYLESPACE_PATH_KEY)
+
+        if (stylespace_inline and stylespace_path) or (
+            not stylespace_inline and not stylespace_path
+        ):
+            raise StylespaceError(
+                "Designspace lib must contain EITHER inline Stylespace data OR a path "
+                "to an external Stylespace file."
+            )
+
+        if stylespace_inline:
+            return cls.from_dict(stylespace_inline)
+
+        if not designspace.path:
+            raise StylespaceError(
+                "Designspace object must have `path` attribute set, because the "
+                "Stylespace path is relative to the Designspace file."
+            )
+        stylespace_path_lookup = Path(designspace.path).parent / stylespace_path
+        return cls.from_file(stylespace_path_lookup)
+</file>
+
+<file path="pyproject.toml">
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling", "hatch-vcs"]
+
+[project]
+name = "statmake"
+dynamic = ["version"]
+description = "Applies STAT information from a Stylespace to a variable font."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.8"
+authors = [
+    { name = "Nikolaus Waxweiler", email = "nikolaus.waxweiler@daltonmaag.com" },
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = ["attrs >= 21.3", "cattrs >= 22.2", "fonttools[ufo] >= 4.11"]
+
+[project.urls]
+Homepage = "https://github.com/daltonmaag/statmake"
+
+[project.scripts]
+statmake = "statmake.cli:main"
+
+[dependency-groups]
+dev = [
+    "mypy",
+    "pytest >= 8",
+    "pytest-cov >= 5",
+    "ruff >= 0.9",
+    "ufo2ft >= 2.7",
+    "ufoLib2 >= 0.4",
+]
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.mypy]
+python_version = "3.8"
+platform = "linux"
+disallow_incomplete_defs = true
+disallow_untyped_defs = true
+no_implicit_optional = true
+strict_equality = true
+strict_optional = true
+warn_no_return = true
+warn_redundant_casts = true
+warn_unreachable = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+disallow_untyped_defs = false
+
+[[tool.mypy.overrides]]
+module = [
+    "fontTools.*",
+    "ufo2ft",
+    "ufoLib2",
+    "pytest",
+    "testutil",
+    "importlib_metadata",
+    "exceptiongroup",
+    "tomli",
+]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "ignore::DeprecationWarning:fs",
+    "ignore::DeprecationWarning:pkg_resources",
+]
+</file>
+
+</files>
